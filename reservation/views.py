@@ -10,6 +10,19 @@ def reservation(request):
     return render(request, "reservation.html", {})
 
 
+class MyBookingsView(View):
+    def get(self, request):
+        if request.user.is_authenticated:
+            online_bookings = OnlineBooking.objects.filter(user=request.user)
+            context = {
+                'online_bookings': online_bookings,
+            }
+            return render(request, 'mybookings.html', context)
+        else:
+            messages.error(request, 'You need to log in to view your bookings.')
+            return redirect('login')
+
+
 class OnlineBookingView(View):
 
     total_tables = 30
@@ -24,7 +37,7 @@ class OnlineBookingView(View):
         }
         return render(request, 'online_booking.html', context)
 
-      def post(self, request):
+    def post(self, request):
 
         form = OnlineBookingForm(request.POST)
 
