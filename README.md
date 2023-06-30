@@ -66,3 +66,9 @@ The website owner has the ability to accept online reservations for this restaur
 - USER STORY: Check reservations #19
     - As a **Site User** I can **select my bookings option** to check **my bookings history.**
 
+# Features
+## Existing Features
+- Navigation bar
+    - The navigation bar is easy to read and looks pleasent. The full responsive navigation bar includes links the Logo, Home page, Online booking, Our Menu and it is possible to log in and check the booking's history. The navigation bar is identical in each page to allow for easy navigation.
+    The navigation bar is responsive on the iPod screen, the sites in the navigation bar on smallare screen are covered to the 'burger' style.     
+
