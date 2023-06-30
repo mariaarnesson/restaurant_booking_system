@@ -82,6 +82,10 @@ class EditBookingView(View):
         form = OnlineBookingForm(request.POST, instance=booking)
 
         if form.is_valid():
+            reservation = form.save(commit=False)
+            if reservation.date < date.today():
+                messages.error(request, 'You cannot book a table for a past date.')
+                return redirect('online_booking')
             form.save()
             messages.success(request, 'Booking updated successfully.')
             return redirect('mybookings')
