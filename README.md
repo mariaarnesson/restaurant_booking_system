@@ -135,6 +135,16 @@ The website owner has the ability to accept online reservations for this restaur
 
     ![Menu desserts](media/menu_desserts.png)
 
+    - Booking Online Page
+    - The user has to be logged in to reserve a table. There is a possibility to book a table on the online booking website. The user selects the date/time of the reservation from the drop-down list and can select the number of guests from 1 to 5 to indicate how many people they want to include in their booking, and select a occassion from existing in the form. The user then clicks the Add reservation button to complete the booking and is redirected to the My Bookings page to see all upcoming and past bookings.
+
+    - Booking Online Page:
+
+    ![Booking Online Page](media/booking_online_page.png)
+
+    - Booking Online Page on small screen:
+    ![Booking Online Page on small screen](media/booking_online_page_small_screen.png)
+
 
 
 
