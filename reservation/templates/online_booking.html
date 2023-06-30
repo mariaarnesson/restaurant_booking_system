@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<title>Online Booking</title>
+{% endblock %}
+
+{% block body %}
+<form method="post" action="{% url 'online_booking' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary" type="submit">Add reservation</button>
+</form>
+
+
+{% endblock %}
