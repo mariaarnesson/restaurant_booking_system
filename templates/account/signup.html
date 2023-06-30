@@ -1,21 +1,46 @@
-{% extends "account/base.html" %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<title>Log in </title>
+{% endblock %}
+
+
+
 
 {% load i18n %}
+{% load account socialaccount %}
 
-{% block head_title %}{% trans "Signup" %}{% endblock %}
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block body %}
+<section class="v-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://img.freepik.com/free-vector/resume-concept-illustration_114360-103.jpg?w=826&t=st=1684359273~exp=1684359873~hmac=2d7db2f3cac7e4b0a51dddb586dd2965ac3db584c6b57c80a52b643c578a8e3d"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-0">
+  
+        <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+<h1 class="fw-bold mb-2 text-uppercase">{% trans "Sign Up" %}</h1>
+<div class="d-flex align-items-center justify-content-center pb-4">
+  <p class="mb-0 me-2">Already have an account? Please </p>
+  <button type="button" class="btn btn-outline-danger"><a href="{{ login_url }}" class="text-white-50 fw-bold"> Sign In</a></button>
 
-{% block content %}
-<h1>{% trans "Sign Up" %}</h1>
+</div>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
-
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
   {{ form.as_p }}
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+  <button type="submit" class="btn btn-primary">{% trans "Sign Up" %} &raquo;</button>
+
 </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
