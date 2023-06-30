@@ -86,9 +86,14 @@ class EditBookingView(View):
             if reservation.date < date.today():
                 messages.error(request, 'You cannot book a table for a past date.')
                 return redirect('online_booking')
+            reservation.user = request.user
+            reservation.approved = False
             form.save()
-            messages.success(request, 'Booking updated successfully.')
+            request.session['online_booking_id'] = reservation.id
+            messages.success(request, 'Booking updated successfully. Your booking is pending approval.')
             return redirect('mybookings')
+        else:
+            messages.error(request, 'The table is already booked.')
 
         context = {
             'form': form,
