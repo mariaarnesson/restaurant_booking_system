@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<title>My Bookings</title>
+{% endblock %}
+
+{% block body %}
+
+{% if online_bookings %}
+{% for booking in online_bookings %}
+<p> Username: {{ user }}</p>
+{{ booking.date }} at {{ booking.time }}
+{{ booking.no_of_guest.guest }} guest(s)
+{{ booking.occassion }}
+{{ booking.table }}
+{{ booking.special_request }}
+{% if booking.approved %}
+<p>Booking Status: Approved</p>
+{% else %}
+<p>Booking Status: Pending </p>
+{% endif %}
+
+
+
+
+
+
+
+{% endblock %}
