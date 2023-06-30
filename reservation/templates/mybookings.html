@@ -51,7 +51,9 @@
 <button type="button" class="btn btn-secondary btn-sm"> 
   <a class="btn btn-secondary" href="{% url 'edit_booking' booking.id %}">Edit Booking</a>
  </button>
-<button type="button" class="btn btn-secondary btn-sm"> Delete Booking </button>
+<button type="button" class="btn btn-danger btn-sm">
+  <a class="btn btn-danger" href="{% url 'delete_booking' booking.id %}"> Delete Booking </a>
+ </button>
 </div>
 </div>
 </div>

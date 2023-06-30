@@ -91,3 +91,19 @@ class EditBookingView(View):
         }
         return render(request, 'edit_booking.html', context)
 
+
+class DeleteBookingView(View):
+
+    def get(self, request, booking_id):
+        booking = get_object_or_404(OnlineBooking, id=booking_id, user=request.user)
+        context = {
+            'booking': booking,
+        }
+        return render(request, 'delete_booking.html', context)
+
+    def post(self, request, booking_id):
+        booking = get_object_or_404(OnlineBooking, id=booking_id, user=request.user)
+        booking.delete()
+        messages.success(request, 'Booking deleted successfully.')
+        return redirect('mybookings')        
+
