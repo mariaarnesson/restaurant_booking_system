@@ -97,5 +97,45 @@ The website owner has the ability to accept online reservations for this restaur
     - Home Page Photos of foods
     - The next part of the main page shows four photos of food nicely arranged  one above the other. The photos present meals served in the restaurant.
 
+    ![Special offers](media/special_offers_homepage.png)
+
+    - Home Page Introduction Text
+
+    ![introduction_text](media/french_restaurant_hompage.png)
+
+    - Home Page - short description about the restaurant
+
+    ![About the restaurant](media/about_restaurant.png)
+
+    - Home Page - about a chef to the restaurant
+
+    ![Chef Home Page](media/our_chef_homepage.png)
+
+- Footer
+    - The footer includes restaurant's location, address and opening hours are presented.
+
+    - The background of the footer is slightly darker to show the contrast between the text in a distinctive way.
+
+    ![Fotter](media/footer.png)
+
+
+- Menu
+    - The menu page gives a list of meals served in the restaurant. There is described the meals, drinks and the price of them.
+
+    - Menu- main dishes
+
+    ![Menu main dishes](media/menu_main_dishes.png)
+
+    - Menu- drinks
+
+    ![Menu drinks](media/menu_drinks.png)
+
+    - Menu- desserts
+
+    ![Menu desserts](media/menu_desserts.png)
+
+    
+
+
 
 
