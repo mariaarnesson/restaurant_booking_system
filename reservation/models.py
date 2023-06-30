@@ -50,7 +50,7 @@ class OnlineBooking(models.Model):
     first_name = models.CharField(max_length=20, unique=True)
     last_name = models.CharField(max_length=20, unique=True)
     no_of_guest = models.ForeignKey(No_of_guest, on_delete=models.CASCADE)
-    reservation_datetime = models.DateField(null=False, blank=False)
+    date = models.DateField(null=False, blank=False)
     time = models.CharField(null=True, blank=False, choices=TIME_CHOICES, max_length=60)
     occassion = models.CharField(max_length=150, choices=OCCASSION_CHOICES, default="Birthday")
     table = models.CharField(max_length=150, choices=TABLE_CHOICES, default="Family table")
@@ -59,7 +59,7 @@ class OnlineBooking(models.Model):
 
     class Meta:
 
-        unique_together = ["no_of_guest", "reservation_datetime"]
+        unique_together = ["no_of_guest", "date"]
 
     def __str__(self):
-        return str(self.reservation_datetime)
+        return str(self.date)

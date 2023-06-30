@@ -10,7 +10,7 @@
 {% if online_bookings %}
 {% for booking in online_bookings %}
 <p> Username: {{ user }}</p>
-{{ booking.date }} at {{ booking.time }}
+<p>{{ booking.date }} at {{ booking.time }}</p>
 {{ booking.no_of_guest.guest }} guest(s)
 {{ booking.occassion }}
 {{ booking.table }}

@@ -11,6 +11,20 @@
     {{ form.as_p }}
     <button class="btn btn-primary" type="submit">Add reservation</button>
 </form>
-
-
 {% endblock %}
+<script>
+    (function() {
+        var availableDates = {{ form.get_available_dates|safe }};
+        var dateInput = document.getElementById("id_date");
+
+        dateInput.addEventListener("change", function() {
+            var selectedDate = new Date(dateInput.value);
+
+            if (availableDates.includes(selectedDate.toISOString().substr(0, 10))) {
+                dateInput.classList.add("available-date");
+            } else {
+                dateInput.classList.remove("available-date");
+            }
+        });
+    })();
+</script>
