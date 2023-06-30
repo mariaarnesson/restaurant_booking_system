@@ -46,7 +46,7 @@
                                 <i class="fa-solid fa-clipboard-user"> </i> {{ user }} 
                             </a>
                             <ul class="dropdown-menu  border zNav">
-                              <li><a class="dropdown-item" href="#">My bookings</a></li>
+                              <li><a class="dropdown-item" href="{% url 'mybookings' %}">My bookings</a></li>
                               <li><hr class=""></li>
                               <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a></li>
                             </ul>

@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 from .models import OnlineBooking
 from .forms import OnlineBookingForm
 from datetime import date
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 
 
 def reservation(request):
@@ -63,4 +64,30 @@ class OnlineBookingView(View):
             context = {
                 'form': form,
             }
-            return render(request, 'online_booking.html', context)    
+            return render(request, 'online_booking.html', context)
+
+
+class EditBookingView(View):
+
+    def get(self, request, booking_id):
+        booking = get_object_or_404(OnlineBooking, id=booking_id, user=request.user)
+        form = OnlineBookingForm(instance=booking)
+        context = {
+            'form': form,
+        }
+        return render(request, 'edit_booking.html', context)
+
+    def post(self, request, booking_id):
+        booking = get_object_or_404(OnlineBooking, id=booking_id, user=request.user)
+        form = OnlineBookingForm(request.POST, instance=booking)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Booking updated successfully.')
+            return redirect('mybookings')
+
+        context = {
+            'form': form,
+        }
+        return render(request, 'edit_booking.html', context)
+

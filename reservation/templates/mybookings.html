@@ -48,7 +48,9 @@
 {% else %}
 <p>Booking Status: Pending </p>
 {% endif %}
-<button type="button" class="btn btn-secondary btn-sm"> Edit Booking </button>
+<button type="button" class="btn btn-secondary btn-sm"> 
+  <a class="btn btn-secondary" href="{% url 'edit_booking' booking.id %}">Edit Booking</a>
+ </button>
 <button type="button" class="btn btn-secondary btn-sm"> Delete Booking </button>
 </div>
 </div>
