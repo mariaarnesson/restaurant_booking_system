@@ -48,13 +48,13 @@
                             <ul class="dropdown-menu  border zNav">
                               <li><a class="dropdown-item" href="#">My bookings</a></li>
                               <li><hr class=""></li>
-                              <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                              <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a></li>
                             </ul>
                         </li>
                         {% else %}
                         <div class="d-grid gap-2 d-md-block">
-                            <button class="btn btn-primary" type="button"> <a class="btn btn-primary" href="#">Sign Up</a></button>
-                            <button class="btn btn-primary" type="button"> <a class="btn btn-primary" href="#">Login</a></button>
+                            <button class="btn btn-primary" type="button"> <a class="btn btn-primary" href="{% url 'account_signup' %}">Sign Up</a></button>
+                            <button class="btn btn-primary" type="button"> <a class="btn btn-primary" href="{% url 'account_login' %}">Login</a></button>
                         </div>   
                         {% endif %}
                     </ul>
