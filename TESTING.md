@@ -5,7 +5,7 @@
 [View the live project here]()
 
 ## Table of content
-- (## Automated Testing)
+- [Automated Testing](#automated-testing)
     - (### Validation:)
 - (## Manual Testing )
     - (### User Stories Testing)
