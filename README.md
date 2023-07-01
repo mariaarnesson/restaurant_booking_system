@@ -208,7 +208,29 @@ The website owner has the ability to accept online reservations for this restaur
 
 # Testing 
 
-Testing information can be found in separate TESTING.md file.    
+Testing information can be found in separate TESTING.md file.
+
+
+# Deployment:
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+   
+    - Login to Heroku
+    - In the Heroku, select: Create new app
+    - Enter name of the app
+    - Enter region of the app
+    - Navigate to the Settings tab.
+    - In 'Config Vars' select 'PORT' as a key to and '8000' as a value
+    - In 'Config Vars' select 'DATABASE_URL' as a key and select value
+    - In 'Config Vars' select 'SECRET_KEY' as a key and select value
+    - In 'Config Vars' select 'CLOUDINARY_URL' as a key and select value
+    - From the tab on the top, select: Deploy.
+    - Afrerword select Github and connect.
+    - Enter the respository name on Github and select: Search
+    - Click connect button.
+    - In Manual deploy, select the 'Deploy Branch' option
+    - Select 'Open app' on the right hand side of the screen
+    - The app should appear in a new tab on the web browser
+    - The live link can be found here - [View the live project here]()
 
 
 
