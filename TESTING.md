@@ -232,3 +232,9 @@ All steps are performed in browsers:
      - It has been confirmed that it shows a message with a valid e-mail address if the user enters a name other the e-mail address in the e-mail input field.
      - Confirmed to display a message with the correct password if the user enters a different password than the first time, or if the password does not match the required arrangement.
     - it has been confirmed that after completing the form correctly and pressing submit, the user will go to the home page.
+
+#### Log out Page
+
+1. Log out Page Text
+    - It has been confirmed that the title and text are correct and display correctly and on correctly place.
+    - The button works properly, and after pressing log out button, the user is logged out.    
