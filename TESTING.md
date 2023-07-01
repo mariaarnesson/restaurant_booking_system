@@ -153,6 +153,18 @@ All steps are performed in browsers:
 
 #### This has been verified on every page:
 
+- Navigation bar:
+    - Hover over each link has been made. The effect has been confirmed to be correct.
+    - The Home page link has been pressed and confirmed to take the user to the Home page.
+    - The Our Menu page link has been pressed and confirmed to take the user to the Our Menu page.
+    - The Online Booking page link has been pressed and confirmed to take the user to the Online Booking page.
+    - The My bookings page link has been pressed and confirmed to take the user to the My bookings page.
+    - The Sign Up and Log in/ Log out page link has been pressed and confirmed to take the user to the responsive page.
+
+- Footer:
+    - It has been verified that the footer is displayed as expected.
+
+
 #### Home Page
 
 #### Our Menu Page
