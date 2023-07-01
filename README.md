@@ -146,6 +146,15 @@ The website owner has the ability to accept online reservations for this restaur
     ![Booking Online Page on small screen](media/booking_online_page_small_screen.png)
 
 
+- My Bookings Page
+
+    ![my_bookings](media/my_bookings.png)  
+
+    - Remove booking.
+
+    ![delete_booking](media/delete_reservation.png)
+
+
 
 
 
