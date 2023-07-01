@@ -146,6 +146,11 @@
 
 ### Testing on desktop
 
+All steps are performed in browsers:
+ - Chrome - Version 111.0.5563.65 (Officiell version) (64 bitar)
+ - Microsoft Edge - Version 111.0.1661.44 (Officiell version) (64 bitar)
+ - Firefox - 111.0 (64-bitars)
+
 #### This has been verified on every page:
 
 #### Home Page
