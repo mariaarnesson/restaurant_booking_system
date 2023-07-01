@@ -199,6 +199,10 @@ All steps are performed in browsers:
 
 #### My bookings Page
 
+1. My bookings Page Text
+    - It has been confirmed that the title and text are correct and display correctly and on correctly place.
+    - The data that was entered into the form on the Online Booking page has been transferred to and displayed in the booking details on the my bookings page.
+
 #### Log in
 
 #### Sign Up
