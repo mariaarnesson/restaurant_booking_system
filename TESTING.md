@@ -167,6 +167,14 @@ All steps are performed in browsers:
 
 #### Home Page
 
+1. Home Page Images
+    - It has been confirmed that the main image on the site is clear and shows up after the page loads.
+    - All pictures on the home page have been reviewed and verified to be the correct size.    
+
+2. Home Page Text
+    - It has been confirmed that the title and text are correct and display correctly.
+
+
 #### Our Menu Page
 
 #### Online Booking Page
