@@ -177,6 +177,12 @@ All steps are performed in browsers:
 
 #### Our Menu Page
 
+1. Menu
+     - It has been confirmed that the menu text is correct, in the right place and display correctly. 
+
+2. Our Menu Page Images
+    - It has been confirmed that all pictures on the site is clear and shows up after the page loads and have been reviewed and verified to be the correct size and on correct place.
+
 #### Online Booking Page
 
 #### My bookings Page
