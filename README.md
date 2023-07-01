@@ -206,3 +206,10 @@ The website owner has the ability to accept online reservations for this restaur
 
 
 
+# Testing 
+
+Testing information can be found in separate TESTING.md file.    
+
+
+
+
