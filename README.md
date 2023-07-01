@@ -232,6 +232,21 @@ Testing information can be found in separate TESTING.md file.
     - The app should appear in a new tab on the web browser
     - The live link can be found here - [View the live project here]()
 
+# Technologies Used
+## Languages Used
+- [HTML](https://sv.wikipedia.org/wiki/HTML)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [JQUERY](https://en.wikipedia.org/wiki/JQuery)
 
+## Frameworks, Libraries and Programs Used:
+
+- [Balsamiq](https://balsamiq.com/) was used to create wireframes.
+- [Font Awesome](https://fontawesome.com/) was used to create icons to footer and home page, logo.
+- [Google Fonts](https://fonts.google.com/?preview.text=Love%20Running&preview.text_type=custom) was used to import 'Caveat', 'Courier New' och 'Lato' that have been used for each page.
+- [Git](https://git-scm.com/) was used  by utilising the Gitpod terminal to commit to Git and Push to GitHub.
+- [GitHub](https://github.com/) was used as a repository for code of the project. 
+- [Django](https://www.djangoproject.com/) was used as the framework to support rapid and secure development of the application.
+- [Bootstrap](https://getbootstrap.com/) was used to build responsive webbpages.
 
 
