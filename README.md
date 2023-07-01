@@ -170,6 +170,39 @@ The website owner has the ability to accept online reservations for this restaur
 
         ![Log Out Page](media/sign_out.png)   
 
+## Features which could be implemented in the future:
+- video supporting the facts:
+    - By adding a video about the restaurant, the user could learn more about restaurant and localisation.
+- video as a background to the online booking page.
+# Design
+## Wireframe: 
+- Wireframe Desktop:
+    - Home Page
+
+    ![wireframes_desktop_home](media/wireframes_home_desktop.png)
+
+    - Menu Page
+
+    ![wireframes desktop menu](media/wireframes_desktop_menu.png)
+
+    - Booking Online Page
+
+    ![wireframes desktop online booking](media/wireframes_desktop_online_booking.png)
+
+    - My Bookings Page
+
+    ![wireframes desktop my bookings](media/wireframes_desktop_mybookings.png)
+
+- Wireframe on smaller screen
+
+    - Menu Page
+
+    ![wireframes ipad manu page](media/wireframes_ipad_menu.png)
+
+    - Online Booking
+
+    ![wireframes ipad online booking page](media/wireframes_ipad_online_booking.png)
+
 
 
 
