@@ -3,6 +3,7 @@ from django.views import View
 from .models import OnlineBooking
 from .forms import OnlineBookingForm
 from datetime import date
+from datetime import datetime
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 
@@ -27,10 +28,13 @@ class MyBookingsView(View):
 class OnlineBookingView(View):
 
     total_tables = 30
-    booked_tables = OnlineBooking.objects.count()
 
     def get(self, request):
+        current_hour = datetime.now().hour
+        
+        booked_tables = OnlineBooking.objects.filter(date=date.today(), time=current_hour).count()
         available_tables = self.total_tables - self.booked_tables
+
         form = OnlineBookingForm()
         context = {
             'form': form,
@@ -86,6 +90,12 @@ class EditBookingView(View):
             if reservation.date < date.today():
                 messages.error(request, 'You cannot book a table for a past date.')
                 return redirect('online_booking')
+
+            existing_booking = OnlineBooking.objects.filter(date=reservation.date, time=reservation.time).exclude(id=booking_id).exists()
+            if existing_booking:
+                messages.error(request, 'The table is already booked.')
+                return redirect('edit_booking', booking_id=booking_id)
+
             reservation.user = request.user
             reservation.approved = False
             form.save()
