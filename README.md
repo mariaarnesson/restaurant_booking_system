@@ -178,13 +178,9 @@ The website owner has the ability to accept online reservations for this restaur
 ## Wireframe: 
 - Wireframe Desktop:
     - Home Page
-        - This is what the home page looks like when the user is not logged in:
-        ![wireframes desktop home user not logged in](media/wireframes_desktop_home_user_not_logged_in.png)
+        
+    ![wireframes_desktop_home](media/wireframes_desktop_home.png)
 
-        -  This is what the home page looks like when the user is not logged in:
-
-        ![wireframes_desktop_home](media/wireframes_desktop_home_user_inlogged.png)
-        ![wireframes desktop home user logged in](media/wireframes_desktop_home_logged_in_user.png)
 
     - Menu Page
 
