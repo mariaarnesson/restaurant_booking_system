@@ -179,7 +179,7 @@ The website owner has the ability to accept online reservations for this restaur
 - Wireframe Desktop:
     - Home Page
 
-    ![wireframes_desktop_home](media/wireframes_home_desktop.png)
+    ![wireframes_desktop_home](media/wireframes_desktop_home_user_inlogged.png)
 
     - Menu Page
 
@@ -194,6 +194,11 @@ The website owner has the ability to accept online reservations for this restaur
     ![wireframes desktop my bookings](media/wireframes_desktop_mybookings.png)
 
 - Wireframe on smaller screen
+
+    - Home Page
+    ![wireframes ipad home nav hidden](media/wireframes_ipad_home_nav_hidden.png)
+    ![wifreames ipad home user not logged in](media/wireframes_ipad_home.png)
+    ![wireframes ipad home user logged in ](media/wireframes_ipad_home_user_loggedin.png)
 
     - Menu Page
 
