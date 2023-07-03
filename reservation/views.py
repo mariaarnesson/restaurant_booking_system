@@ -90,11 +90,6 @@ class EditBookingView(View):
                 messages.error(request, 'You cannot book a table for a past date.')
                 return redirect('online_booking')
 
-            existing_booking = OnlineBooking.objects.filter(date=reservation.date, time=reservation.time).exclude(id=booking_id).exists()
-            if existing_booking:
-                messages.error(request, 'The table is already booked.')
-                return redirect('edit_booking', booking_id=booking_id)
-
             reservation.user = request.user
             reservation.approved = False
             form.save()
