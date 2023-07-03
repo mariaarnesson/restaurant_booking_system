@@ -219,6 +219,10 @@ The website owner has the ability to accept online reservations for this restaur
 
     ![wireframes ipad online booking page](media/wireframes_ipad_online_booking.png)
 
+    - My bookings Page
+
+    ![wireframes ipad my bookings page](media/wireframes_ipad_mybookings_page.png)
+
 
 
 
