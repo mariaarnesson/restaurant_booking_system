@@ -197,9 +197,7 @@ The website owner has the ability to accept online reservations for this restaur
 - Wireframe on smaller screen
 
     - Home Page
-    ![wireframes ipad home nav hidden](media/wireframes_ipad_home_nav_hidden.png)
-    ![wifreames ipad home user not logged in](media/wireframes_ipad_home.png)
-    ![wireframes ipad home user logged in ](media/wireframes_ipad_home_user_loggedin.png)
+    ![wireframes ipad home nav hidden](media/wireframes_home_ipad.png)
 
     - Menu Page
 
@@ -237,15 +235,15 @@ Testing information can be found in separate TESTING.md file.
     - Select 'Open app' on the right hand side of the screen
     - The app should appear in a new tab on the web browser
     - The live link can be found here - [View the live project here]()
-
-# Technologies Used
-## Languages Used
+# Planning
+## Technologies Used
+### Languages Used
 - [HTML](https://sv.wikipedia.org/wiki/HTML)
 - [CSS](https://en.wikipedia.org/wiki/CSS)
 - [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [JQUERY](https://en.wikipedia.org/wiki/JQuery)
 
-## Frameworks, Libraries and Programs Used:
+### Frameworks, Libraries and Programs Used:
 
 - [Balsamiq](https://balsamiq.com/) was used to create wireframes.
 - [Font Awesome](https://fontawesome.com/) was used to create icons to footer and home page, logo.
