@@ -194,6 +194,18 @@ The website owner has the ability to accept online reservations for this restaur
 
     ![wireframes desktop my bookings](media/wireframes_desktop_mybookings.png)
 
+    - Log In Page
+
+    ![wireframes desktop log in page](media/wireframes_login_desktop.png)
+
+    - Sign Up Page
+
+    ![wireframes desktop sign up page](media/wireframes_desktop_signup.png)
+
+    - Log Out Page
+
+    ![wireframes log out page](media/wireframes_desktop_logout.png)
+
 - Wireframe on smaller screen
 
     - Home Page
