@@ -28,11 +28,9 @@ class MyBookingsView(View):
 class OnlineBookingView(View):
 
     total_tables = 30
+    booked_tables = OnlineBooking.objects.count()
 
     def get(self, request):
-        current_hour = datetime.now().hour
-        
-        booked_tables = OnlineBooking.objects.filter(date=date.today(), time=current_hour).count()
         available_tables = self.total_tables - self.booked_tables
 
         form = OnlineBookingForm()
@@ -68,7 +66,8 @@ class OnlineBookingView(View):
             context = {
                 'form': form,
             }
-            return render(request, 'online_booking.html', context)
+            response = render(request, 'online_booking.html', context)
+            return HttpResponse(response.content)
 
 
 class EditBookingView(View):
