@@ -28,6 +28,7 @@ class MyBookingsView(View):
 
 class OnlineBookingView(View):
     total_tables = 10
+    max_bookings_per_day = 10
     
     def get(self, request):
         current_date = datetime.now().date()
@@ -38,10 +39,9 @@ class OnlineBookingView(View):
             time = time_choice[0]
             booked_tables = OnlineBooking.objects.filter(date=current_date, time=time).count()
             remaining_slots = self.total_tables - booked_tables
-            available_slots.append((time, remaining_slots))
-
             if remaining_slots > 0:
                 available_slots.append((time, remaining_slots))
+
 
         context = {
             'form': form,
@@ -71,8 +71,8 @@ class OnlineBookingView(View):
                 available_slots = self.get_available_slots(reservation.date)
 
                 context = {
-                'form': form,
-                'available_slots': available_slots,
+                    'form': form,
+                    'available_slots': available_slots,
                 }    
 
                 reservation.user = request.user
