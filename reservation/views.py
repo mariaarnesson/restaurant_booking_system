@@ -6,6 +6,7 @@ from datetime import date
 from datetime import datetime
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 
 
 def reservation(request):
@@ -27,16 +28,18 @@ class MyBookingsView(View):
 
 class OnlineBookingView(View):
 
-    total_tables = 30
-    booked_tables = OnlineBooking.objects.count()
-
+    total_tables = 15
+    max_bookings_per_day = 10
+    
     def get(self, request):
-        available_tables = self.total_tables - self.booked_tables
+        current_date = datetime.now().date()
+        booked_tables = OnlineBooking.objects.filter(date=current_date).count()
+        available_tables_today = self.total_tables - booked_tables
 
         form = OnlineBookingForm()
         context = {
             'form': form,
-            'available_tables': available_tables,
+            'available_tables_today': available_tables_today,
         }
         return render(request, 'online_booking.html', context)
 
@@ -48,9 +51,13 @@ class OnlineBookingView(View):
             
             if form.is_valid():
                 reservation = form.save(commit=False)
-                if reservation.date < date.today():
+                if reservation.date < datetime.now().date():
                     messages.error(request, 'You cannot book a table for a past date.')
                     return redirect('online_booking')
+
+                if reservation.date == datetime.now().date() and OnlineBooking.objects.filter(date=reservation.date).count() >= self.max_bookings_per_day:
+                    messages.error(request, 'No more tables available for today. Please choose another date.')
+                    return redirect('online_booking')    
 
                 reservation.user = request.user
                 reservation.approved = False
@@ -59,15 +66,16 @@ class OnlineBookingView(View):
                 messages.success(request, 'Reservation request submitted successfully. Your booking is pending approval.')
                 return redirect('mybookings')
             else:
-                messages.error(request, 'The table is already booked.')
+                messages.error(request, 'Error in filling out the form.')
         else:
             messages.error(request, 'You need to log in to make a booking.')        
 
-            context = {
+        context = {
                 'form': form,
-            }
-            response = render(request, 'online_booking.html', context)
-            return HttpResponse(response.content)
+                'available_tables_today': self.total_tables,
+        }
+        response = render(request, 'online_booking.html', context)
+        return HttpResponse(response.content)
 
 
 class EditBookingView(View):
