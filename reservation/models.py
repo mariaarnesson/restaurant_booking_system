@@ -47,8 +47,8 @@ class OnlineBooking(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='restaurant_booking'
     )
-    first_name = models.CharField(max_length=20, unique=True)
-    last_name = models.CharField(max_length=20, unique=True)
+    first_name = models.CharField(max_length=20, blank=False)
+    last_name = models.CharField(max_length=20, blank=False)
     no_of_guest = models.ForeignKey(No_of_guest, on_delete=models.CASCADE)
     date = models.DateField(null=False, blank=False)
     time = models.CharField(null=True, blank=False, choices=TIME_CHOICES, max_length=60)

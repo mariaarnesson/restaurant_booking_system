@@ -28,8 +28,8 @@ class MyBookingsView(View):
 
 class OnlineBookingView(View):
 
-    total_tables = 15
-    max_bookings_per_day = 10
+    total_tables = 10
+    max_bookings_per_day = 1
     
     def get(self, request):
         current_date = datetime.now().date()
@@ -55,8 +55,15 @@ class OnlineBookingView(View):
                     messages.error(request, 'You cannot book a table for a past date.')
                     return redirect('online_booking')
 
+                current_date = datetime.now().date()
+                booked_tables_today = OnlineBooking.objects.filter(date=current_date).count()    
+
                 if reservation.date == datetime.now().date() and OnlineBooking.objects.filter(date=reservation.date).count() >= self.max_bookings_per_day:
                     messages.error(request, 'No more tables available for today. Please choose another date.')
+                    return redirect('online_booking')
+
+                if booked_tables_today >= self.total_tables:
+                    messages.error(request, 'No more tables available. Please choose another date.')
                     return redirect('online_booking')    
 
                 reservation.user = request.user
@@ -72,7 +79,7 @@ class OnlineBookingView(View):
 
         context = {
                 'form': form,
-                'available_tables_today': self.total_tables,
+                'available_tables_today': self.total_tables - booked_tables_today,
         }
         response = render(request, 'online_booking.html', context)
         return HttpResponse(response.content)
