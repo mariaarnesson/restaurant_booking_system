@@ -18,10 +18,21 @@
     {% csrf_token %}
     <span class="h1 fw-bold mb-0">Le chere</span>
     <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Book a table</h5>
-    <p>Number of available tables today: {{ available_tables_today }}</p>
+   
+    
     {{ form.as_p }}
     <button class="btn btn-primary" type="submit">Add reservation</button>
 </form>
+{% if available_slots %}
+  <h3>Available Time Slots</h3>
+  <ul>
+    {% for time_slot, remaining_slots in available_slots %}
+      <li>{{ time_slot }} - Remaining Slots: {{ remaining_slots }}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No available time slots at the moment.</p>
+{% endif %}
 </div>
 </div>
 </div>

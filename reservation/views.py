@@ -27,19 +27,25 @@ class MyBookingsView(View):
 
 
 class OnlineBookingView(View):
-
     total_tables = 10
-    max_bookings_per_day = 1
     
     def get(self, request):
         current_date = datetime.now().date()
-        booked_tables = OnlineBooking.objects.filter(date=current_date).count()
-        available_tables_today = self.total_tables - booked_tables
-
         form = OnlineBookingForm()
+        available_slots = []
+
+        for time_choice in OnlineBooking.TIME_CHOICES:
+            time = time_choice[0]
+            booked_tables = OnlineBooking.objects.filter(date=current_date, time=time).count()
+            remaining_slots = self.total_tables - booked_tables
+            available_slots.append((time, remaining_slots))
+
+            if remaining_slots > 0:
+                available_slots.append((time, remaining_slots))
+
         context = {
             'form': form,
-            'available_tables_today': available_tables_today,
+            'available_slots': available_slots,
         }
         return render(request, 'online_booking.html', context)
 
@@ -58,13 +64,16 @@ class OnlineBookingView(View):
                 current_date = datetime.now().date()
                 booked_tables_today = OnlineBooking.objects.filter(date=current_date).count()    
 
-                if reservation.date == datetime.now().date() and OnlineBooking.objects.filter(date=reservation.date).count() >= self.max_bookings_per_day:
+                if reservation.date == current_date and booked_tables_today >= self.max_bookings_per_day:
                     messages.error(request, 'No more tables available for today. Please choose another date.')
                     return redirect('online_booking')
 
-                if booked_tables_today >= self.total_tables:
-                    messages.error(request, 'No more tables available. Please choose another date.')
-                    return redirect('online_booking')    
+                available_slots = self.get_available_slots(reservation.date)
+
+                context = {
+                'form': form,
+                'available_slots': available_slots,
+                }    
 
                 reservation.user = request.user
                 reservation.approved = False
@@ -79,7 +88,7 @@ class OnlineBookingView(View):
 
         context = {
                 'form': form,
-                'available_tables_today': self.total_tables - booked_tables_today,
+                
         }
         response = render(request, 'online_booking.html', context)
         return HttpResponse(response.content)

@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-import datetime
+from datetime import datetime
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -52,6 +52,7 @@ class OnlineBooking(models.Model):
     no_of_guest = models.ForeignKey(No_of_guest, on_delete=models.CASCADE)
     date = models.DateField(null=False, blank=False)
     time = models.CharField(null=True, blank=False, choices=TIME_CHOICES, max_length=60)
+    
     occassion = models.CharField(max_length=150, choices=OCCASSION_CHOICES, default="Birthday")
     table = models.CharField(max_length=150, choices=TABLE_CHOICES, default="Family table")
     special_request = models.TextField(max_length=150, blank=True)
