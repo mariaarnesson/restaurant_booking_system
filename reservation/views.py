@@ -29,6 +29,10 @@ class MyBookingsView(View):
 class OnlineBookingView(View):
     total_tables = 10
     max_bookings_per_day = 10
+
+    def get_available_slots(self, date):
+
+        return OnlineBooking.TIME_CHOICES
     
     def get(self, request):
         current_date = datetime.now().date()
