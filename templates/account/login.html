@@ -25,9 +25,7 @@
         <button class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
         <div class="d-flex align-items-center justify-content-center pb-4">
           <p class="mb-0 me-2">Don't have an account?</p>
-          <button type="button" class="btn btn-outline-danger">
-            <a href="{% url 'account_signup' %}" class="btn btn-outline-primary">Create new</a>
-          </button>
+          <a href="{% url 'account_signup' %}" class="btn btn-outline-danger text-white-50 fw-bold">Create new</a>
         </div>
       </form>
     </div>
