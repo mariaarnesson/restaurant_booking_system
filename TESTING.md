@@ -24,13 +24,18 @@
 - W3C Markup Validation HTML
     - [HTML Validator](https://validator.w3.org/#validate_by_input) was used to validate HTML.
 
-    - result for index.html
+    - result for home.html:
         - [Result home html part1](media/test/validator_result_home_html_part1.png)
         - [Result home html part2](media/test/validator_result_home_html_part2.png)
         - [Result home html part3](media/test/validator_result_home_html_part3.png)
         - [Result home html part4](media/test/validator_result_home_html_part4.png)
         - [Result home html part5](media/test/validator_result_home_html_part5.png)
         - [Result home html part6](media/test/validator_result_home_html_part6.png)
+
+    - result for login.html:
+        - [Result login html part1](media/test/validator_result_login_html_part1.png)
+        - [Result login html part2](media/test/validator_result_login_html_part2.png)
+        - [Result login html part2](media/test/validator_result_login_html_part3.png)    
 
 
 - W3C CSS validation CSS
