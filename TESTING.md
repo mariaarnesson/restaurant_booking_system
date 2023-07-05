@@ -22,6 +22,17 @@
 ### Validation:
 
 - W3C Markup Validation HTML
+    - [HTML Validator](https://validator.w3.org/#validate_by_input) was used to validate HTML.
+
+    - result for index.html
+        - [Result home html part1](media/test/validator_result_home_html_part1.png)
+        - [Result home html part2](media/test/validator_result_home_html_part2.png)
+        - [Result home html part3](media/test/validator_result_home_html_part3.png)
+        - [Result home html part4](media/test/validator_result_home_html_part4.png)
+        - [Result home html part5](media/test/validator_result_home_html_part5.png)
+        - [Result home html part6](media/test/validator_result_home_html_part6.png)
+
+
 - W3C CSS validation CSS
     - [Validator.w3](https://validator.w3.org/nu/#textarea)  was used to validate CSS.
     
