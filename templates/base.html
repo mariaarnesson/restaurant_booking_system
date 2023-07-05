@@ -53,12 +53,8 @@
                         </li>
                         {% else %}
                         <div class="d-grid gap-2 d-md-block">
-                            <button class="btn btn-primary" type="button">
-                                <a class="btn btn-primary" href="{% url 'account_signup' %}">Sign Up</a>
-                            </button>
-                            <button class="btn btn-primary" type="button">
-                                <a class="btn btn-primary" href="{% url 'account_login' %}">Login</a>
-                            </button>
+                            <a class="btn btn-primary" type="button" href="{% url 'account_signup' %}">Sign Up</a>
+                            <a class="btn btn-primary" type button href="{% url 'account_login' %}">Login</a>
                         </div>   
                         {% endif %}
                     </ul>
