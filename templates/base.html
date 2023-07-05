@@ -15,7 +15,6 @@
     <script src="{% static 'js/script.js' %}"></script>
     <script src="https://kit.fontawesome.com/142db3e41a.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
     {% block head %}
     {% endblock %}
   </head>
@@ -63,7 +62,6 @@
             </div>
         </nav>
     </header> 
-
         <!--Messages Start-->
         {% if messages %}
         {% for message in messages %}
@@ -74,10 +72,6 @@
         {% endfor %}
         {% endif %}
         <!--Messages End-->
-
-    
-
-
     {% block body %}
     {% endblock %}
     <footer class="bg-dark text-white">   
@@ -125,6 +119,5 @@
             </div>
         </div>
     </footer>
-
   </body>
 </html>
