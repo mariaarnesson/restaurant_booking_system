@@ -6,83 +6,78 @@
 {% endblock %}
 
 {% block body %}
-    <!--Hero 1 Start-->
-    
- 
-  </header>
- 
+
+ <!-- Introduction text, logo -->
   <div class="card text-bg-dark">
     <img src="https://img.freepik.com/free-photo/lifestyle-portrait-elegant-young-woman-with-dark-wavy-hairstyle-trendy-makeup-fashionable-beige-pullover-coat-sitting-cafe-terrace-drinking-coffee-from-white-cup_197531-24448.jpg?size=626&ext=jpg" class="card-img" alt="...">
     <div class="card-img-overlay">
-      <div class="logo">
-        <h3>Welcome to
-        <h3 class="ml6">
-          <span class="text-wrapper">
-            <span class="letters">Le chère</span>
-          </span>
-        </h3>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <p>Welcome to</p>
+        </br>
+          <h3 class="ml1 fs-1">
+            <span class="text-wrapper">
+              <span class="letters">Le chère</span>
+            </span>
+          </h3>
       </div>
     </div>
   </div>  
-    </br></br></br></br>
+  </br></br></br></br>
 <!-- special offers-->
-
   <center>
-<h1 class="text-center">Special offers</h1>
-
-
-<div class="card-group">
-  <div class="col">
-    <div class="card">
-      <img src="https://img.freepik.com/free-photo/croissant-basket-with-cloth-wooden-table-flat-lay_176474-8128.jpg?size=626&ext=jpg" class="card-img-top" alt="spacial-offers">
-      <div class="card-body">
-        <h5 class="card-title">Croissant</h5>
-        <p class="card-text">6.99 $</p>
-        <a href="#" class="btn btn-primary">See Our Menu</a>
+  <h1 class="text-center">Special offers</h1>
+  <div class="card-group">
+    <div class="col">
+      <div class="card">
+        <img src="https://img.freepik.com/free-photo/croissant-basket-with-cloth-wooden-table-flat-lay_176474-8128.jpg?size=626&ext=jpg" class="card-img-top" alt="spacial-offers">
+        <div class="card-body">
+          <h5 class="card-title">Croissant</h5>
+          <p class="card-text">6.99 $</p>
+          <a href="{% url 'menu' %}" class="btn btn-primary">See Our Menu</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://img.freepik.com/free-photo/roasted-pumpkin-carrot-soup-with-cream-seeds-fresh-green-ceramic-bowl-top-view_114579-1660.jpg?size=626&ext=jpg" class="card-img-top" alt="special_offers">
+        <div class="card-body">
+          <h5 class="card-title">Shellfish soup</h5>
+          <p class="card-text">15.95 $</p>
+          <a href="{% url 'menu' %}" class="btn btn-primary">See Our Menu</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://img.freepik.com/free-photo/fresh-salad-with-vegetables-tomatoes-red-onions-lettuce-quail-eggs-healthy-food-diet-concept-vegetarian-food_2829-20246.jpg?w=1060&t=st=1684621258~exp=1684621858~hmac=2f7cb47142401da69f0fd75103c14a30eda0a833348576485ce938c824033d4c" class="card-img-top" alt="special_offers">
+        <div class="card-body">
+          <h5 class="card-title">Salade de Chèvre</h5>
+          <p class="card-text">12.95 $</p>
+          <a href="{% url 'menu' %}" class="btn btn-primary">See Our Menu</a>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col">
-    <div class="card">
-      <img src="https://img.freepik.com/free-photo/roasted-pumpkin-carrot-soup-with-cream-seeds-fresh-green-ceramic-bowl-top-view_114579-1660.jpg?size=626&ext=jpg" class="card-img-top" alt="special_offers">
-      <div class="card-body">
-        <h5 class="card-title">Shellfish soup</h5>
-        <p class="card-text">15.95 $</p>
-        <a href="#" class="btn btn-primary">See Our Menu</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="https://img.freepik.com/free-photo/fresh-salad-with-vegetables-tomatoes-red-onions-lettuce-quail-eggs-healthy-food-diet-concept-vegetarian-food_2829-20246.jpg?w=1060&t=st=1684621258~exp=1684621858~hmac=2f7cb47142401da69f0fd75103c14a30eda0a833348576485ce938c824033d4c" class="card-img-top" alt="special_offers">
-      <div class="card-body">
-        <h5 class="card-title">Salade de Chèvre</h5>
-        <p class="card-text">12.95 $</p>
-        <a href="#" class="btn btn-primary">See Our Menu</a>
-      </div>
-    </div>
-  </div>
- 
-</div>
-</center>
-</br></br></br></br>
-<div class="container py-5 h-100">
-  <div class="row d-flex justify-content-center align-items-center h-100">
-    <div class="col col-xl-10">
-      <div class="card" style="border-radius: 1rem;">
-        <div class="row g-0">
-          <div class="col-md-6 col-lg-5 d-none d-md-block">
-            <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
-          </div>
-          <div class="col-md-6 col-lg-7 d-flex align-items-center">
-            <div class="card-body p-4 p-lg-5 text-black">
-              <h1 class="text-center">French restaurants of the 19th century</h1>
-              <p class="card-text">French restaurants today is often called "the most refined" 
-                or "the culinary center of the world". It has been famous for its excellent chefs,
-                 the best ingredients, amazing recipes, as well as countless culinary rituals. 
-                 French dishes are characterized by elegance and variety.</p>
-          </div>
+  </center>
+  </br></br></br></br>
+  <!-- Information about the restaurant -->
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=600"
+                   alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+                <h1 class="text-center">French restaurants of the 19th century</h1>
+                <p class="card-text">French restaurants today is often called "the most refined" 
+                  or "the culinary center of the world". It has been famous for its excellent chefs,
+                  the best ingredients, amazing recipes, as well as countless culinary rituals. 
+                  French dishes are characterized by elegance and variety.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -91,42 +86,33 @@
   </div>
   </br></br></br></br>
    <div class="d-flex justify-content-center text-center mt-4 pt-1">
-  <ul class="like">
-    
-    <li>
+    <ul class="like">
+      <li>
         <i class="fa-solid fa-thumbs-up"></i>
         <h2>1550</h2>
         <p>Satisfed guests</p>
-    </li>
-    
-   
-    <li>
+      </li>
+      <li>
         <i class="fa-solid fa-utensils"></i>
         <h2>125</h2>
         <p>Lunches every day</p>
-    </li>
-    
-   
-    <li>
+      </li>
+      <li>
         <i class="fa-solid fa-people-group"></i>
         <h2>35</h2>
         <p>Family tables</p>
-    </li>
-    
-    
-    <li>
+      </li>
+      <li>
         <i class="fa-solid fa-people-robbery"></i>
         <h2>18</h2>
         <p>Team members</p>
-    </li>
-    
-</ul>
+      </li>
+    </ul>
   </div>
-</br></br></br></br></br>
-<div class="container-fluid h-custom">
+  </br></br></br></br></br>
+  <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-md-9 col-lg-6 col-xl-5">
-        
+      <div class="col-md-8 col-lg-6 col-xl-4">      
         <h1 class="text-center">Our Story</h1>
         <p>Welcome to the restaurant Le chère! We offer not only
           the classic Alsatian tarte flambée, but also other dishes 
@@ -135,23 +121,15 @@
         </p>
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-        <img src="https://img.freepik.com/free-photo/closeup-shot-tasty-shrimp-tempura-with-sauce-white-background_181624-60475.jpg?w=1060&t=st=1684619092~exp=1684619692~hmac=214ac0dfbafdd7ecf1718ab6b4fdaeeb5703363111fb91ed3e2792b687b00d20" style="border-radius: 2em; width: 50%;">
+        <img src="https://img.freepik.com/free-photo/closeup-shot-tasty-shrimp-tempura-with-sauce-white-background_181624-60475.jpg?w=1060&t=st=1684619092~exp=1684619692~hmac=214ac0dfbafdd7ecf1718ab6b4fdaeeb5703363111fb91ed3e2792b687b00d20" style="border-radius: 2em; width: 90%;">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <img src="https://img.freepik.com/free-photo/assortment-spanish-pintxos-isolated-white-background_123827-22327.jpg?t=st=1684619194~exp=1684619794~hmac=3781c6374a19d470d88320aa32592e659769c62a602fbbb7ec2fc7949fb951d1" style="border-radius: 2em; width: 90%;">
       </div>
     </div>
-</div>
-<div class="row d-flex justify-content-center align-items-center h-100">
-  <div class="text-center">
-    
-  
   </div>
-  <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-    <img src="https://img.freepik.com/free-photo/assortment-spanish-pintxos-isolated-white-background_123827-22327.jpg?t=st=1684619194~exp=1684619794~hmac=3781c6374a19d470d88320aa32592e659769c62a602fbbb7ec2fc7949fb951d1" style="border-radius: 2em; width: 50%;">
-  </div>
-</div>
-</div>
-
-
-</br></br></br></br>
+  </br></br></br></br>
+  <!-- Information about the chef of the restaurant -->
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
@@ -168,34 +146,42 @@
                   the plates before they go to the waiter. In addition,
                   she is also responsible for all other matters relating to the kitchen, 
                   including interior hygiene and training of apprentices </p>
-
-                  <h2> Emma Wolter </h2>
-            </div>
+                <h2> Emma Wolter </h2>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </br></br></br></br>
+  <script type="text/javascript">
+  var textWrapper = document.querySelector('.ml1 .letters');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-<script>
-var textWrapper = document.querySelector('.ml6 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml6 .letter',
-    translateY: ["1.1em", 0],
-    translateZ: 0,
-    duration: 750,
-    delay: (el, i) => 50 * i
-  }).add({
-    targets: '.ml6',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-</script>
-{% endblock %}
+  anime.timeline({loop: true})
+    .add({
+      targets: '.ml1 .letter',
+      scale: [0.3,1],
+      opacity: [0,1],
+      translateZ: 0,
+      easing: "easeOutExpo",
+      duration: 600,
+      delay: (el, i) => 70 * (i+1)
+    }).add({
+      targets: '.ml1 .line',
+      scaleX: [0,1],
+      opacity: [0.5,1],
+      easing: "easeOutExpo",
+      duration: 700,
+      offset: '-=875',
+      delay: (el, i, l) => 80 * (l - i)
+    }).add({
+      targets: '.ml1',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+  </script>
+  {% endblock %}

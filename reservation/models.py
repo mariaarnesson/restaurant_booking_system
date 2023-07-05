@@ -41,7 +41,8 @@ class OnlineBooking(models.Model):
         ("Family table", "Family table"),
         ("Outdoor seating", "Outdoor seating"),
         ("Table for two", "Table for two"),
-        ("Table on second floor (sea view)", "Table on second floor (sea view)")
+        ("Table on second floor (sea view)",
+         "Table on second floor (sea view)")
         )
 
     user = models.ForeignKey(
@@ -51,10 +52,13 @@ class OnlineBooking(models.Model):
     last_name = models.CharField(max_length=20, blank=False)
     no_of_guest = models.ForeignKey(No_of_guest, on_delete=models.CASCADE)
     date = models.DateField(null=False, blank=False)
-    time = models.CharField(null=True, blank=False, choices=TIME_CHOICES, max_length=60)
+    time = models.CharField(null=True, blank=False,
+                            choices=TIME_CHOICES, max_length=60)
     
-    occassion = models.CharField(max_length=150, choices=OCCASSION_CHOICES, default="Birthday")
-    table = models.CharField(max_length=150, choices=TABLE_CHOICES, default="Family table")
+    occassion = models.CharField(max_length=150, choices=OCCASSION_CHOICES,
+                                 default="Birthday")
+    table = models.CharField(max_length=150, choices=TABLE_CHOICES,
+                             default="Family table")
     special_request = models.TextField(max_length=150, blank=True)
     approved = models.BooleanField(default=False)
 

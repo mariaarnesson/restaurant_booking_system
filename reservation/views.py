@@ -22,7 +22,8 @@ class MyBookingsView(View):
             }
             return render(request, 'mybookings.html', context)
         else:
-            messages.error(request, 'You need to log in to view your bookings.')
+            messages.error(request,
+            'You need to log in to view your bookings.')
             return redirect('login')
 
 
@@ -41,11 +42,11 @@ class OnlineBookingView(View):
 
         for time_choice in OnlineBooking.TIME_CHOICES:
             time = time_choice[0]
-            booked_tables = OnlineBooking.objects.filter(date=current_date, time=time).count()
+            booked_tables = OnlineBooking.objects.filter(date=current_date,
+                                                         time=time).count()
             remaining_slots = self.total_tables - booked_tables
             if remaining_slots > 0:
                 available_slots.append((time, remaining_slots))
-
 
         context = {
             'form': form,
@@ -62,7 +63,8 @@ class OnlineBookingView(View):
             if form.is_valid():
                 reservation = form.save(commit=False)
                 if reservation.date < datetime.now().date():
-                    messages.error(request, 'You cannot book a table for a past date.')
+                    messages.error(request, 
+                    'You cannot book a table for a past date.')
                     return redirect('online_booking')
 
                 current_date = datetime.now().date()
