@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block body %}
+{% load crispy_forms_tags %}
 <section class="v-100">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -20,7 +21,7 @@
     <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Book a table</h5>
    
     
-    {{ form.as_p }}
+    {{ form | crispy }}
     <button class="btn btn-primary" type="submit">Add reservation</button>
 </form>
 {% if available_slots %}
