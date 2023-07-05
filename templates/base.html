@@ -52,10 +52,10 @@
                             </ul>
                         </li>
                         {% else %}
-                        <div class="d-grid gap-2 d-md-block">
+                        <li class="d-grid gap-2 d-md-block">
                             <a class="btn btn-primary" type="button" href="{% url 'account_signup' %}">Sign Up</a>
-                            <a class="btn btn-primary" type button href="{% url 'account_login' %}">Login</a>
-                        </div>   
+                            <a class="btn btn-primary" type="button" href="{% url 'account_login' %}">Login</a>
+                        </li>   
                         {% endif %}
                     </ul>
                 </div>
