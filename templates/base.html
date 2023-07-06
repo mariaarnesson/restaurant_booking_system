@@ -66,24 +66,20 @@
             </div>
         </nav>
     </header> 
-        <!--Messages Start-->
-       
-        {% for message in messages %}
-       
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-            <div class="alert {{ message.tags }}  alert-dismissible fade show text-center " role="alert">
-                <h3 class="display-3">{{ message | safe }}</h3>
-                <button type="button" class="btn-close fs-1 position-absolute top-50 start-0 translate-middle-y" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            {% endfor %} 
-        </div>    
-            </div>  
-        </div>   
-     
-      
-        <!--Messages End-->
+    <!--Messages Start-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+                <div class="alert {{ message.tags }}  alert-dismissible fade show text-center " role="alert">
+                    <p class="display-6">{{ message | safe }}</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %} 
+            </div>    
+        </div>  
+    </div>  
+    <!--Messages End-->
     {% block body %}
     {% endblock %}
     <footer class="bg-dark text-white">   
