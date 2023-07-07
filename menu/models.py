@@ -1,3 +1,13 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
-# Create your models here.
+
+class Menu(models.Model):
+    featured_image = CloudinaryField('image', default='placeholder')
+    title = models.CharField(max_length=100)
+    mealName = models.CharField(max_length=100)
+    mealDescription = models.TextField()
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+
+    def __str__(self):
+        return self.title
