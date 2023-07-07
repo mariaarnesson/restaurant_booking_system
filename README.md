@@ -279,7 +279,15 @@ Testing information can be found in separate TESTING.md file.
 
 # Credits
 ## Code:
+
+- meals
+[Traditional French dish of fried frog legs.](https://www.tasteatlas.com/cuisses-de-grenouilles#:~:text=Cuisses%20de%20grenouilles%20is%20a,and%20parsley%20until%20well%20done.)
 - This page was used to help bild a lay out to Log in, Log out, Sign up, Online booking and Our menu - [MDB](https://mdbootstrap.com/docs/standard/extended/login/)
+- [French soup descrition](https://www.deliciousmagazine.co.uk/recipes/soupe-de-poissons/)
+- [Warm French Goat’s Cheese Salad](https://www.recipetineats.com/warm-french-goats-cheese-salad-salade-de-chevre-chaud/)
+- [Classic Tomates Farcies](https://www.pardonyourfrench.com/classic-tomates-farcies-baked-ground-meat-stuffed-tomatoes/)
+- [French Roast Leg of Lamb](https://www.curiouscuisiniere.com/french-roast-leg-of-lamb/)
+- [Cuisses de Grenouille](https://www.tasteatlas.com/poulet-basquaise)
 
 - This page was used to help me include testing in correctly way - [TESTING.md](https://github.com/AJGreaves/familyhub/blob/master/testing.md)
 

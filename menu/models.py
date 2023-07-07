@@ -6,6 +6,9 @@ class Menu(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     title = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.title
+
 
 class Meal(models.Model):
     menu = models.ForeignKey('Menu', on_delete=models.CASCADE)    
