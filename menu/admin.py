@@ -1,10 +1,14 @@
 from django.contrib import admin
-from .models import Menu
+from .models import Menu, Meal
+
+
+class MealInline(admin.TabularInline):
+    model = Meal
 
 
 class MenuAdmin(admin.ModelAdmin):
-    list_display = ('title', 'mealName', 'price')
-    search_fields = ('title', 'mealName')
+    inlines = [MealInline]
 
 
 admin.site.register(Menu, MenuAdmin)
+admin.site.register(Meal)
