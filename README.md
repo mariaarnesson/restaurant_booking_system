@@ -225,7 +225,15 @@ The website owner has the ability to accept online reservations for this restaur
 
 
 
+## Diagram
 
+The presented diagram shows a logical data model. 
+- Thanks to the 'No of guest' class, each user can select the number of people booking one table. 
+- The ability to choose the time of the booked table is marked as TIME CHOICES. 
+- The opportunity to choose the occasion of the booked table is marked as OCCASSION CHOICES. 
+- The choice of table type is marked as TABLE CHOICES.
+
+![diagram_reservation](media/diagram_reservation.png)
 # Testing 
 
 Testing information can be found in separate TESTING.md file.
