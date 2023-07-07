@@ -4,7 +4,7 @@
 {% endblock %}
 {% block body %}
 {% for menu in menus %}
-<section class="v-100" style="background-color: black;">
+<section class="v-100 bg-black">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-md-9 col-lg-6 col-xl-5">
@@ -13,32 +13,22 @@
         </div>
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 text-white">
             <div>
+              
                 <h2>{{ menu.title }}</h2>
-                <p>{{ menu.mealName }}_____________________________ {{ menu.price }} $</p>
-                <p>{{ menu.mealDescription }} </p>
-               <!--
-                <p>Soupe de Poissons _______________________________ 16.95 $</p>
-                <p>Fish Soup</p>
-                
-                <p>Salade de Chèvre Chaud___________________________ 13.95 $</p>
-                <p>(Goat Cheese Salad)</p>
-                
-                <p>Tomates Farcies_________________________________ 14.95 $</p>
-                <p>(Stuffed Tomatoes)</p>
-                
-                <p>Gigot d'Agneau__________________________________ 15.95 $</p>
-                <p>(Roasted Leg of Lamb)</p>
-               
-                <p>Poulet Basquaise ________________________________ 14.95 $</p>
-                <p>(Basque Chicken Stew)</p>
-                -->
+                {% for meal in menu.meal_set.all %}
+                <p class="text-wrapper">{{ meal.mealName }}_____________________________ {{ meal.price }} $</p>
+                <p class="text-white">({{ meal.mealDescription }})</p>
+             
+                {% endfor %}
             </div>
-            {% endfor %}
+            
         </div>
       </div>
     </div>
-   
+    {% endfor %}
   </section>
+ 
+  <!--
 <section class="v-100">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -88,5 +78,6 @@
     </div>
    
   </section>
+  -->
 <br><br><br><br><br><br>
 {% endblock %}
