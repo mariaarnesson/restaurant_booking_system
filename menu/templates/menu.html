@@ -10,9 +10,10 @@
     {% for menu in menus %}
   
     <div class="col">
-        
+        <a href="{% url 'meal' menu.id %}">
     <img src="{{ menu.featured_image.url }}" alt="{{ menu.title }}" class="img-fluid card" style="width:30em; height: 22em; border-radius: 1em;" >
-  <h1> {{ menu.title }} </h1>
+        </a>
+    <h1> {{ menu.title }} </h1>
     
 </div>
 
