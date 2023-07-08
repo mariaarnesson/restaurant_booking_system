@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Menu, Meal
+from .models import Menu, Meal, Drink
 
 
 def menu(request):

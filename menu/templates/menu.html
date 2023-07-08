@@ -20,6 +20,30 @@
                 <p>_______________________________________________________________ {{ meal.price }} $</p>
                 <p class="text-white">({{ meal.mealDescription }})</p>
              <br>
+               
+            </div>
+            
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+  <section class="v-100 bg-white">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="{{ menu.featured_image.url }}"
+            class="img-fluid" alt="Featured Image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 text-white">
+            <div>
+              
+                <h2 >{{ menu.title }}</h2>
+                {% for drink in menu.drink_set.all %}
+                <h5 class="text-wrapper" style="color: gold;">{{ drink.drinkName }}</h5>
+                <p>_______________________________________________________________ {{ drink.price }} $</p>
+                <p class="text-white">({{ drink.drinkDescription }})</p>
+             <br>
                 {% endfor %}
             </div>
             
@@ -28,6 +52,7 @@
     </div>
     {% endfor %}
   </section>
+
  
   <!--
 <section class="v-100">
