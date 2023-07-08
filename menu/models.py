@@ -19,6 +19,7 @@ class Meal(models.Model):
     def __str__(self):
         return self.mealName
 
+
 class Drink(models.Model):
     menu = models.ForeignKey('Menu', on_delete=models.CASCADE)
     drinkName = models.CharField(max_length=100)
@@ -27,4 +28,3 @@ class Drink(models.Model):
 
     def __str__(self):
         return self.drinkName
-            
