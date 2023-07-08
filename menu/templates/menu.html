@@ -14,11 +14,12 @@
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 text-white">
             <div>
               
-                <h2>{{ menu.title }}</h2>
+                <h2 >{{ menu.title }}</h2>
                 {% for meal in menu.meal_set.all %}
-                <p class="text-wrapper">{{ meal.mealName }}_____________________________ {{ meal.price }} $</p>
+                <h5 class="text-wrapper" style="color: gold;">{{ meal.mealName }}</h5>
+                <p>_______________________________________________________________ {{ meal.price }} $</p>
                 <p class="text-white">({{ meal.mealDescription }})</p>
-             
+             <br>
                 {% endfor %}
             </div>
             
