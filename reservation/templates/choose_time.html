@@ -1,0 +1,10 @@
+{% if time_slots %}
+<h1>Aviliable time for {{ date }}</h1>
+<ul>
+    {% for time_slot in time_slots %}
+    <li>{{ time_slot.time }}</li>
+{% endfor %}
+</ul>
+{% else %}
+    <li>No available time slots for the selected date.</li>
+{% endif %}

@@ -72,16 +72,10 @@ class OnlineBookingView(View):
                     messages.error(request, 'No more tables available for today. Please choose another date.')
                     return redirect('online_booking')
 
-                available_slots = []
-                for time_choice in OnlineBooking.TIME_CHOICES:
-                    time = time_choice[0]
-                    booked_tables = OnlineBooking.objects.filter(date=selected_date, time=time).count()
-                    remaining_slots = self.total_tables - booked_tables
-                    available_slots.append((time, remaining_slots))
 
                 context = {
                     'form': form,
-                    'available_slots': available_slots,
+                
                     'selected_date': selected_date,
                 }  
 
@@ -90,11 +84,11 @@ class OnlineBookingView(View):
                 reservation.save()
                 request.session['online_booking_id'] = reservation.id
                 messages.success(request, 'Reservation request submitted successfully. Your booking is pending approval.')
-                return redirect('mybookings')
+                return redirect('choose_time')
             else:
                 messages.error(request, 'Error in filling out the form.')
         else:
-            messages.error(request, 'You need to log in to make a booking.')     
+            messages.error(request, 'You need to log in to make a booking.')
 
         context = {
                 'form': form,
@@ -102,6 +96,20 @@ class OnlineBookingView(View):
         }
         response = render(request, 'online_booking.html', context)
         return HttpResponse(response.content)
+
+
+def choose_time(request):
+    if request.method == 'POST':
+        date = request.POST.get('date')
+        available_time_slots = OnlineBooking.objects.filter(date=date, approved=True)
+
+        context = {
+            'date': date,
+            'time_slots': available_time_slots
+        }
+        return render(request, 'choose_time.html', context)
+    else:
+        return redirect('online_booking')
 
 
 class EditBookingView(View):
