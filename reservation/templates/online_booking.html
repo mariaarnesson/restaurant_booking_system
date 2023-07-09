@@ -28,7 +28,7 @@
   <h3>Available Time Slots</h3>
   <ul>
     {% for time_slot, remaining_slots in available_slots %}
-      <li>{{ time_slot }} - Remaining Slots: {{ remaining_slots }}</li>
+      <li>{{ time_slot }} - Remaining tables to be booked: {{ remaining_slots }}</li>
     {% endfor %}
   </ul>
 {% else %}
