@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
-from .models import OnlineBooking
+from .models import OnlineBooking, No_of_guest
 from .forms import OnlineBookingForm
 from datetime import date
 from datetime import datetime
@@ -34,7 +34,7 @@ class OnlineBookingView(View):
     def get_available_slots(self, date):
 
         return OnlineBooking.TIME_CHOICES
-    
+  
     def get(self, request):
         current_date = datetime.now().date()
         form = OnlineBookingForm()

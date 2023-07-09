@@ -62,9 +62,5 @@ class OnlineBooking(models.Model):
     special_request = models.TextField(max_length=150, blank=True)
     approved = models.BooleanField(default=False)
 
-    class Meta:
-
-        unique_together = ["no_of_guest", "date"]
-
     def __str__(self):
         return str(self.date)
