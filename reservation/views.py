@@ -32,25 +32,22 @@ class OnlineBookingView(View):
     max_bookings_per_day = 10
 
     def get_available_slots(self, date):
-
-        return OnlineBooking.TIME_CHOICES
-  
-    def get(self, request):
-        current_date = datetime.now().date()
-        form = OnlineBookingForm()
         available_slots = []
-
         for time_choice in OnlineBooking.TIME_CHOICES:
             time = time_choice[0]
-            booked_tables = OnlineBooking.objects.filter(date=current_date,
-                                                         time=time).count()
+            booked_tables = OnlineBooking.objects.filter(date=date, time=time).count()
             remaining_slots = self.total_tables - booked_tables
-            if remaining_slots > 0:
-                available_slots.append((time, remaining_slots))
+            available_slots.append((time, remaining_slots))
+
+        return available_slots
+  
+    def get(self, request):
+        
+        form = OnlineBookingForm()
 
         context = {
             'form': form,
-            'available_slots': available_slots,
+            
         }
         return render(request, 'online_booking.html', context)
 
@@ -62,24 +59,31 @@ class OnlineBookingView(View):
             
             if form.is_valid():
                 reservation = form.save(commit=False)
-                if reservation.date < datetime.now().date():
-                    messages.error(request, 
-                    'You cannot book a table for a past date.')
+                selected_date = reservation.date
+
+                if selected_date < date.today():
+                    messages.error(request, 'You cannot book a table for a past date.')
                     return redirect('online_booking')
 
-                current_date = datetime.now().date()
-                booked_tables_today = OnlineBooking.objects.filter(date=current_date).count()    
+                current_date = date.today()
+                booked_tables_today = OnlineBooking.objects.filter(date=current_date).count()
 
-                if reservation.date == current_date and booked_tables_today >= self.max_bookings_per_day:
+                if selected_date == current_date and booked_tables_today >= self.max_bookings_per_day:
                     messages.error(request, 'No more tables available for today. Please choose another date.')
                     return redirect('online_booking')
 
-                available_slots = self.get_available_slots(reservation.date)
+                available_slots = []
+                for time_choice in OnlineBooking.TIME_CHOICES:
+                    time = time_choice[0]
+                    booked_tables = OnlineBooking.objects.filter(date=selected_date, time=time).count()
+                    remaining_slots = self.total_tables - booked_tables
+                    available_slots.append((time, remaining_slots))
 
                 context = {
                     'form': form,
                     'available_slots': available_slots,
-                }    
+                    'selected_date': selected_date,
+                }  
 
                 reservation.user = request.user
                 reservation.approved = False
@@ -90,7 +94,7 @@ class OnlineBookingView(View):
             else:
                 messages.error(request, 'Error in filling out the form.')
         else:
-            messages.error(request, 'You need to log in to make a booking.')        
+            messages.error(request, 'You need to log in to make a booking.')     
 
         context = {
                 'form': form,

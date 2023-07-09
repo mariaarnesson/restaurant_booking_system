@@ -24,8 +24,9 @@
     {{ form | crispy }}
     <button class="btn btn-primary" type="submit">Add reservation</button>
 </form>
-{% if available_slots %}
-  <h3>Available Time Slots</h3>
+{% if form.date.value %}
+  <h3>Available Time Slots for {{ form.date.value }} </h3>
+  {% if available_slots %}
   <ul>
     {% for time_slot, remaining_slots in available_slots %}
       <li>{{ time_slot }} - Remaining tables to be booked: {{ remaining_slots }}</li>
@@ -34,11 +35,12 @@
 {% else %}
   <p>No available time slots at the moment.</p>
 {% endif %}
+{% endif %}
 </div>
 </div>
 </div>
 </section>
-{% endblock %}
+
 <script type="text/javascript">
     (function() {
         var availableDates = {{ form.get_available_dates|safe }};
@@ -49,9 +51,11 @@
 
             if (availableDates.includes(selectedDate.toISOString().substr(0, 10))) {
                 dateInput.classList.add("available-date");
+                window.location.href = "{% url 'online_booking' %}" + "?date=" + dateInput.value;
             } else {
                 dateInput.classList.remove("available-date");
             }
         });
     })();
 </script>
+{% endblock %}
