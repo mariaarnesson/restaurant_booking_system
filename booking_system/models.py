@@ -8,11 +8,21 @@ STATUS_CHOICES = (
     (2, 'Canceled'),
 )
 
+TIME_CHOICES = [
+    ("10 AM - 12 AM", "10 AM - 12 AM"),
+    ("11 AM - 1 PM", "11 AM - 1 PM"),
+    ("12 PM - 2 PM", "12 PM - 2 PM"),
+    ("1 PM - 3 PM", "1 PM - 3 PM"),
+    ("2 PM - 4 PM", "2 PM - 4 PM"),
+    ("3 PM - 5 PM", "3 PM - 5 PM"),
+    ("4 PM - 6 PM", "4 PM - 6 PM"),
+    ("5 PM - 7 PM", "5 PM - 7 PM"),
+    ("6 PM - 8 PM", "6 PM - 8 PM"),
+    ("7 PM - 9 PM", "7 PM - 9 PM"),
+    ("8 PM - 10 PM", "8 PM - 10 PM"),
+]
 
 class Customer(models.Model):
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE,
-    )
     your_name = models.CharField(max_length=20, blank=False)
     your_email = models.EmailField()
 
@@ -21,22 +31,15 @@ class Customer(models.Model):
 
 
 class NumberPeople(models.Model):
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE,
-    )
-    seats = models.IntegerField(null=False, blank=False)
-    min_people = models.IntegerField()
-    max_people = models.IntegerField()
+    seats = models.CharField(null=False, blank=False, max_length=60)
 
     def __str__(self):
         return str(self.seats)
 
 
 class AvailableTime(models.Model):
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE,
-    )
-    book_time = models.CharField(max_length=20, null=False, blank=False)
+    book_time = models.CharField(null=True, blank=False,
+                            choices=TIME_CHOICES, max_length=60)
 
     def __str__(self):
         return str(self.book_time)
