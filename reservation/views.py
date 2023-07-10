@@ -111,10 +111,9 @@ class OnlineBookingView(View):
             messages.error(request, 'You need to log in to make a booking.')
 
         context = {
-                'form': form,
+            'form': form,
         }
-        response = render(request, 'online_booking.html', context)
-        return HttpResponse(response.content)
+        return render(request, 'online_booking.html', context)
 
 
 class EditBookingView(View):

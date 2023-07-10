@@ -24,7 +24,13 @@
     {{ form | crispy }}
     <button class="btn btn-primary" type="submit"> Add reservation </button>
 </form>
-
+<ul>
+  {% for time, remaining_slots in available_slots %}
+    <li>{{ time }}- {{ remaining_slots }} tables aviliable </li>
+  {% empty %}
+    <li>No available slots for today.</li>
+  {% endfor %}
+</ul>
 </div>
 </div>
 </div>
