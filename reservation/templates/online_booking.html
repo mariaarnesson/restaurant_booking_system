@@ -32,7 +32,7 @@
 
 <script type="text/javascript">
     (function() {
-        var availableDates = {{ form.get_available_dates|safe }};
+        var availableDates = "{{ form.get_available_dates|safe }}";
         var dateInput = document.getElementById("id_date");
 
         dateInput.addEventListener("change", function() {
