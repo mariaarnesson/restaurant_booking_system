@@ -4,6 +4,7 @@ from .models import OnlineBooking, No_of_guest
 from .forms import OnlineBookingForm
 from datetime import date
 from datetime import datetime
+from datetime import timedelta
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
@@ -32,21 +33,29 @@ class OnlineBookingView(View):
     max_bookings_per_day = 10
 
     def get_available_slots(self, date):
-        available_slots = []
-        for time_choice in OnlineBooking.TIME_CHOICES:
-            time = time_choice[0]
-            booked_tables = OnlineBooking.objects.filter(date=date, time=time).count()
-            remaining_slots = self.total_tables - booked_tables
-            available_slots.append((time, remaining_slots))
 
-        return available_slots
+        return OnlineBooking.TIME_CHOICES
   
     def get(self, request):
+
+        current_date = datetime.now().date()
         
         form = OnlineBookingForm()
+        available_slots = []
+        
+
+        for time_choice in OnlineBooking.TIME_CHOICES:
+            time = time_choice[0]
+            booked_tables = OnlineBooking.objects.filter(date=current_date,
+                                                         time=time).count()
+            remaining_slots = self.total_tables - booked_tables
+            if remaining_slots > 0:
+                available_slots.append((time, remaining_slots))
+
 
         context = {
             'form': form,
+             'available_slots': available_slots,
             
         }
         return render(request, 'online_booking.html', context)
@@ -59,24 +68,24 @@ class OnlineBookingView(View):
             
             if form.is_valid():
                 reservation = form.save(commit=False)
-                selected_date = reservation.date
 
-                if selected_date < date.today():
+                if reservation.date < datetime.now().date():
                     messages.error(request, 'You cannot book a table for a past date.')
                     return redirect('online_booking')
 
-                current_date = date.today()
+                current_date = datetime.now().date()
                 booked_tables_today = OnlineBooking.objects.filter(date=current_date).count()
 
-                if selected_date == current_date and booked_tables_today >= self.max_bookings_per_day:
+                if reservation.date == current_date and booked_tables_today >= self.max_bookings_per_day:
                     messages.error(request, 'No more tables available for today. Please choose another date.')
                     return redirect('online_booking')
 
+                available_slots = self.get_available_slots(reservation.date)
 
                 context = {
                     'form': form,
                 
-                    'selected_date': selected_date,
+                    'available_slots': available_slots,
                 }  
 
                 reservation.user = request.user
@@ -84,7 +93,7 @@ class OnlineBookingView(View):
                 reservation.save()
                 request.session['online_booking_id'] = reservation.id
                 messages.success(request, 'Reservation request submitted successfully. Your booking is pending approval.')
-                return redirect('choose_time')
+                return redirect('mybookings')
             else:
                 messages.error(request, 'Error in filling out the form.')
         else:
@@ -96,20 +105,6 @@ class OnlineBookingView(View):
         }
         response = render(request, 'online_booking.html', context)
         return HttpResponse(response.content)
-
-
-def choose_time(request):
-    if request.method == 'POST':
-        date = request.POST.get('date')
-        available_time_slots = OnlineBooking.objects.filter(date=date, approved=True)
-
-        context = {
-            'date': date,
-            'time_slots': available_time_slots
-        }
-        return render(request, 'choose_time.html', context)
-    else:
-        return redirect('online_booking')
 
 
 class EditBookingView(View):

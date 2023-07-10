@@ -1,5 +1,8 @@
 from django import forms
 from .models import No_of_guest, OnlineBooking
+from datetime import date
+from datetime import datetime
+from datetime import timedelta
 
 
 class OnlineBookingForm(forms.ModelForm):
@@ -7,14 +10,14 @@ class OnlineBookingForm(forms.ModelForm):
         model = OnlineBooking
         fields = (
             'first_name', 'last_name', 'no_of_guest',
-            'date', 'occassion',
+            'date', 'time', 'occassion',
             'table', 'special_request'
             )
         exclude = ["user"]
         widgets = {
             'date': forms.widgets.DateInput(attrs={'type': 'date'})
         }    
-"""
+
     def get_available_dates(self):
         booked_dates = OnlineBooking.objects.values_list('date', flat=True)
 
@@ -25,4 +28,3 @@ class OnlineBookingForm(forms.ModelForm):
         available_dates = [date for date in available_dates if date not in booked_dates]
 
         return available_dates
-"""        
