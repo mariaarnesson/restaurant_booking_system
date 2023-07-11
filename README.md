@@ -295,7 +295,20 @@ Testing information can be found in separate TESTING.md file.
 
 - My codes were based on information from that site [ModelForm](https://docs.djangoproject.com/en/4.1/topics/forms/modelforms/)
 ## Media:
-All pictures was taken from [Freepik](https://www.freepik.com/).
+All pictures was taken from [Freepik](https://www.freepik.com/):
+- [Women with a cup](https://img.freepik.com/free-photo/lifestyle-portrait-elegant-young-woman-with-dark-wavy-hairstyle-trendy-makeup-fashionable-beige-pullover-coat-sitting-cafe-terrace-drinking-coffee-from-white-cup_197531-24448.jpg?size=626&ext=jpg)
+- [Croissant](https://img.freepik.com/free-photo/croissant-basket-with-cloth-wooden-table-flat-lay_176474-8128.jpg?size=626&ext=jpg)
+- [Soup](https://img.freepik.com/free-photo/roasted-pumpkin-carrot-soup-with-cream-seeds-fresh-green-ceramic-bowl-top-view_114579-1660.jpg?size=626&ext=jpg)
+- [Salad](https://img.freepik.com/free-photo/fresh-salad-with-vegetables-tomatoes-red-onions-lettuce-quail-eggs-healthy-food-diet-concept-vegetarian-food_2829-20246.jpg?w=1060&t=st=1684621258~exp=1684621858~hmac=2f7cb47142401da69f0fd75103c14a30eda0a833348576485ce938c824033d4c)
+- [Wrap](https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=600)
+- [Starter- meal shrimp](https://img.freepik.com/free-photo/closeup-shot-tasty-shrimp-tempura-with-sauce-white-background_181624-60475.jpg?w=1060&t=st=1684619092~exp=1684619692~hmac=214ac0dfbafdd7ecf1718ab6b4fdaeeb5703363111fb91ed3e2792b687b00d20)
+- [Starter-  meal toast](https://img.freepik.com/free-photo/assortment-spanish-pintxos-isolated-white-background_123827-22327.jpg?t=st=1684619194~exp=1684619794~hmac=3781c6374a19d470d88320aa32592e659769c62a602fbbb7ec2fc7949fb951d1)
+- [Female chef](https://img.freepik.com/free-photo/female-chef-carefully-pouring-sauce-dish_23-2148763167.jpg?size=626&ext=jpg)
+- [Main dishes](https://res.cloudinary.com/dun5p7nsx/image/upload/v1688718119/p53pgq1zqvsj4myishcr.webp)
+- [Drinks](https://res.cloudinary.com/dun5p7nsx/image/upload/v1688718175/lbpymghnmgayog1qd7de.webp)
+- [Desserts- macarons](https://res.cloudinary.com/dun5p7nsx/image/upload/v1688718236/r6pnh4aoef0viy89sy8m.jpg)
+- [Online booking photo](https://img.freepik.com/free-vector/waiters-concept-illustration_114360-2908.jpg?w=1060&t=st=1684266496~exp=1684267096~hmac=5f7ce09bf9265ee365e209700bfa6258f97461744c5fa1aec14eab988542d737)
+
 
 
 
