@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'portfolio-project4-restaurant.herokuapp.com', 'localhost', '8000-mariaarness-restaurantb-ydrnhcm49bg.ws-eu101.gitpod.io']
+ALLOWED_HOSTS = ['portfolio-project4-restaurant.herokuapp.com', 'localhost', '8000-mariaarness-restaurantb-ydrnhcm49bg.ws-eu101.gitpod.io']
 
 
 # Application definition
@@ -162,6 +162,7 @@ STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
