@@ -34,15 +34,15 @@ class OnlineBookingView(View):
 
     def get_available_slots(self, date):
 
-        booked_tables = OnlineBooking.objects.filter(date=date).count()
         available_slots = []
 
         for time_choice, _ in OnlineBooking.TIME_CHOICES:
             time = time_choice
+            booked_tables = OnlineBooking.objects.filter(date=date, time=time).count()
             remaining_slots = self.total_tables - booked_tables
+            
             if remaining_slots > 0:
                 available_slots.append((time, remaining_slots))
-                booked_tables -= 1
 
         return available_slots
 
@@ -74,26 +74,24 @@ class OnlineBookingView(View):
             if form.is_valid():
                 reservation = form.save(commit=False)
 
-                if reservation.date < datetime.now().date():
+                if reservation.date < date.today():
                     messages.error(
                         request,
                         'You cannot book a table for a past date.'
                     )
                     return redirect('online_booking')
 
-                current_date = datetime.now().date()
-                booked_tables_today = (
+                booked_tables_on_reservation_date = (
                     OnlineBooking.objects
-                    .filter(date=current_date)
+                    .filter(date=reservation.date, time=reservation.time)
                     .count()
                 )
 
-                if (reservation.date == current_date and
-                        booked_tables_today >= self.max_bookings_per_day):
+                if booked_tables_on_reservation_date >= self.max_bookings_per_day:
                     messages.error(
                         request,
-                        'No more tables available for today for this date.'
-                        )
+                        'No more tables available for the selected date and time.'
+                    )
                     return redirect('online_booking')
 
                 available_slots = self.get_available_slots(reservation.date)
