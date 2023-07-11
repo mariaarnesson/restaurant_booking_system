@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'portfolio-project4-restaurant-7e7cbe473f3c.herokuapp.com', 'localhost', '8000-mariaarness-restaurantb-ydrnhcm49bg.ws-eu101.gitpod.io']
+ALLOWED_HOSTS = [ 'portfolio-project4-restaurant.herokuapp.com', 'localhost', '8000-mariaarness-restaurantb-ydrnhcm49bg.ws-eu101.gitpod.io']
 
 
 # Application definition
@@ -42,13 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'django.contrib.messages',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
     'reservation',
     'menu',
     'home',
@@ -89,7 +89,8 @@ ROOT_URLCONF = 'restaurant.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
