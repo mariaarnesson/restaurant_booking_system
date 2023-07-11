@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from datetime import datetime, date
+from django.db.models import Q
 
 
 def reservation(request):
@@ -15,7 +16,7 @@ def reservation(request):
 class MyBookingsView(View):
     def get(self, request):
         if request.user.is_authenticated:
-            online_bookings = OnlineBooking.objects.filter(user=request.user)
+            online_bookings = OnlineBooking.objects.filter(user=request.user).order_by('date')
             context = {
                 'online_bookings': online_bookings,
             }
