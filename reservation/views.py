@@ -5,7 +5,7 @@ from .forms import OnlineBookingForm
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
-from datetime import datetime
+from datetime import datetime, date
 
 
 def reservation(request):
@@ -125,6 +125,19 @@ class OnlineBookingView(View):
 
 
 class EditBookingView(View):
+
+    def get_available_slots(self, date):
+        booked_tables = OnlineBooking.objects.filter(date=date).count()
+        available_slots = []
+
+        for time_choice, _ in OnlineBooking.TIME_CHOICES:
+            time = time_choice
+            remaining_slots = self.total_tables - booked_tables
+            if remaining_slots > 0:
+                available_slots.append((time, remaining_slots))
+                booked_tables -= 1
+
+        return available_slots
 
     def get(self, request, booking_id):
         booking = get_object_or_404(
