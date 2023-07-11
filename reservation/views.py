@@ -2,12 +2,10 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 from .models import OnlineBooking, No_of_guest
 from .forms import OnlineBookingForm
-from datetime import date
-from datetime import datetime
-from datetime import timedelta
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
+from datetime import datetime
 
 
 def reservation(request):
