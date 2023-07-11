@@ -36,7 +36,17 @@ class OnlineBookingView(View):
 
     def get_available_slots(self, date):
 
-        return OnlineBooking.TIME_CHOICES
+        booked_tables = OnlineBooking.objects.filter(date=date).count()
+        available_slots = []
+
+        for time_choice, _ in OnlineBooking.TIME_CHOICES:
+            time = time_choice
+            remaining_slots = self.total_tables - booked_tables
+            if remaining_slots > 0:
+                available_slots.append((time, remaining_slots))
+                booked_tables -= 1
+
+        return available_slots
 
     def get(self, request):
 

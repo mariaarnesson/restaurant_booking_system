@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Select Time</h1>
+  <form method="POST" action="{% url 'select_time' %}">
+    {% csrf_token %}
+    {% for time_slot in available_times %}
+      <button type="submit" name="time_slot" value="{{ time_slot.id }}">{{ time_slot.time }}</button>
+    {% endfor %}
+  </form>
+{% endblock %}
