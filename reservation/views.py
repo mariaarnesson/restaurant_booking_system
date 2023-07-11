@@ -124,6 +124,9 @@ class OnlineBookingView(View):
 
 class EditBookingView(View):
 
+    total_tables = 10
+    max_bookings_per_day = 10
+
     def get_available_slots(self, date):
         booked_tables = OnlineBooking.objects.filter(date=date).count()
         available_slots = []
@@ -163,6 +166,20 @@ class EditBookingView(View):
                 messages.error(
                     request,
                     'You cannot book a table for a past date.'
+                )
+                return redirect('online_booking')
+
+            booked_tables_on_reservation_date = (
+                OnlineBooking.objects
+                .filter(date=reservation.date, time=reservation.time)
+                .exclude(id=booking_id)  # Exclude the current booking from count
+                .count()
+            )
+
+            if booked_tables_on_reservation_date >= self.max_bookings_per_day:
+                messages.error(
+                    request,
+                    'No more tables available for the selected date and time.'
                 )
                 return redirect('online_booking')
 
