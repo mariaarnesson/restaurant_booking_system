@@ -1,16 +1,21 @@
+from django.views import generic
 from django.shortcuts import render, get_object_or_404
 from .models import Menu, Meal
 
 
-def menu_view(request):
-    menus = Menu.objects.all()
-    print(len(menus))
-    return render(request, 'menu.html', {'menus': menus})
+class MenuView(generic.ListView):
+    template_name = 'menu.html'
+    context_object_name = 'menus'
+    queryset = Menu.objects.all()
 
 
-def meal_view(request, menu_id):
-    menu = get_object_or_404(Menu, pk=menu_id)
-    menus = Menu.objects.all() 
-    meals = menu.meal_set.all()
-    return render(request, 'meal.html', {'menu': menu, 'menus': menus, 'meals': meals})
+class MealView(generic.DetailView):
+    template_name = 'meal.html'
+    model = Menu
+    context_object_name = 'menu'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['menus'] = Menu.objects.all()
+        context['meals'] = self.object.meal_set.all()
+        return context
