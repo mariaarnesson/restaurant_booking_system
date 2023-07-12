@@ -1,95 +1,93 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block head %}
-<title>My Bookings</title>
 {% endblock %}
-
 {% block body %}
-
 <section class="v-100 gradient-custom">
     <div class="container py-5 h-100">
       <div class="row d-flex align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5 offset-lg-2">
           <div class="jumbotron jumbo-height">
             <h1 class="display-4">My Bookings</h1>
-            
             <hr class="my-4">
-
-{% if online_bookings %}
-{% for booking in online_bookings %}
-<div class="card bg-dark text-white" style="border-radius: 1rem; margin: 3em;">
-    <div>
-      <div class="card-body">
-       
-<hr>
-<p class="text-white">
-  <i class="fa-solid fa-calendar-days" style="color: #e4e7ec;"></i>
-  {{ booking.date }} at {{ booking.time }}
-</p>
-<hr>
-<h3> My contact details: </h3>
-<p>  {{ booking.first_name }} {{ booking.last_name }}</p>
-<p> {{ user.email }} </p>
-<hr>
-<h3> Bookings details: </h3>
-<p class="text-white">
-  <i class="fa-solid fa-location-dot" style="color: #d7dae0;"></i>
-  Restaurant Le Chere
-</p>
-<p class="text-white">
-    <i class="fa-solid fa-person" style="color: #cdd0d6;"></i>
-    {{ booking.no_of_guest.guest }} guest(s)
-</p>
-<p class="text-white">  
-  <i class="fa-solid fa-cake-candles" style="color: #cdd0d6;"></i>
-{{ booking.occassion }}
-</p>
-<p class="text-white">
-  <i class="fa-solid fa-chair" style="color: #cdd0d6;"></i> 
-{{ booking.table }}
-</p>
-<p class="text-white">  
-{{ booking.special_request }}
-</p>
-{% if booking.approved %}
-<p>
-  <i class="fa-solid fa-check" style="color: #cdd0d6;"></i>
-  Status: Approved
-</p>
-{% else %}
-<p>
-  <i class="fa-solid fa-xmark" style="color: #cdd0d6;"></i>
-  Status: Pending 
-</p>
-{% endif %}
-<button type="button" class="btn btn-secondary btn-sm"> 
-  <a class="btn btn-secondary" href="{% url 'edit_booking' booking.id %}">Edit Booking</a>
- </button>
-<button type="button" class="btn btn-danger btn-sm">
-  <a class="btn btn-danger" href="{% url 'delete_booking' booking.id %}"> Delete Booking </a>
- </button>
-</div>
-</div>
-</div>
-{% endfor %}
-{% else %}
-<div class="row">
-    <div class="col text-center pt-5">
-      <div class="card pt-5 pb-5">
-        <h2>No bookings</h2>
-        <p class="pt-3 pb-3">Want to book a table?</p>
-        <div>
-          <a class="btn btn-info" href="{% url 'online_booking' %}">Book Now</a>
+            {% if online_bookings %}
+            {% for booking in online_bookings %}
+            <div class="card bg-dark text-white" style="border-radius: 1rem; margin: 3em;">
+              <div>
+                <div class="card-body">  
+                <hr>
+                <p class="text-white">
+                  <i class="fa-solid fa-calendar-days" style="color: #e4e7ec;"></i>
+                  {{ booking.date }} at {{ booking.time }}
+                </p>
+                <hr>
+                <h3> My contact details: </h3>
+                <p>  {{ booking.first_name }} {{ booking.last_name }}</p>
+                <p> {{ user.email }} </p>
+                <hr>
+                <h3> Bookings details: </h3>
+                <p class="text-white">
+                  <i class="fa-solid fa-location-dot" style="color: #d7dae0;"></i>
+                  Restaurant Le Chere
+                </p>
+                <p class="text-white">
+                    <i class="fa-solid fa-person" style="color: #cdd0d6;"></i>
+                    {{ booking.no_of_guest.guest }} guest(s)
+                </p>
+                <p class="text-white">  
+                  <i class="fa-solid fa-cake-candles" style="color: #cdd0d6;"></i>
+                {{ booking.occassion }}
+                </p>
+                <p class="text-white">
+                  <i class="fa-solid fa-chair" style="color: #cdd0d6;"></i> 
+                {{ booking.table }}
+                </p>
+                <p class="text-white">  
+                {{ booking.special_request }}
+                </p>
+                {% if booking.approved %}
+                <p>
+                  <i class="fa-solid fa-check" style="color: #cdd0d6;"></i>
+                  Status: Approved
+                </p>
+                {% else %}
+                <p>
+                  <i class="fa-solid fa-xmark" style="color: #cdd0d6;"></i>
+                  Status: Pending 
+                </p>
+                {% endif %}
+                <button type="button" class="btn btn-secondary btn-sm"> 
+                  <a class="btn btn-secondary" href="{% url 'edit_booking' booking.id %}">
+                    Edit Booking
+                  </a>
+                </button>
+                <button type="button" class="btn btn-danger btn-sm">
+                  <a class="btn btn-danger" href="{% url 'delete_booking' booking.id %}">
+                    Delete Booking 
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% else %}
+          <div class="row">
+            <div class="col text-center pt-5">
+              <div class="card pt-5 pb-5">
+                <h2>No bookings</h2>
+                <p class="pt-3 pb-3">Want to book a table?</p>
+                <div>
+                  <a class="btn btn-info" href="{% url 'online_booking' %}">
+                    Book Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>
   </div>
-{% endif %}
-</div>
-</div>
-</div>
-</div>
 </section>
-
 {% endblock %}
