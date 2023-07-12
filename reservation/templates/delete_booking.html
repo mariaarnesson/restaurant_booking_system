@@ -1,10 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block head %}
-<title>Delete Booking</title>
 {% endblock %}
-
 {% block body %}
 <section class="v-100">
   <div class="container-fluid h-custom">
@@ -16,8 +13,12 @@
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
         <form method="post">
           {% csrf_token %}
-          <span class="h1 fw-bold mb-0">Delete Booking</span>
-          <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Are you sure you want to delete this reservation?</h5>
+          <span class="h1 fw-bold mb-0">
+            Delete Booking
+          </span>
+          <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">
+            Are you sure you want to delete this reservation?
+          </h5>
           <p class="text-black">
             <i class="fa-solid fa-location-dot" style="color: #d7dae0;"></i>
             Restaurant Le Chere
@@ -39,7 +40,9 @@
           <p class="text-black">
             {{ booking.special_request }}
           </p>
-          <button class="btn btn-danger" type="submit">Delete Reservation</button>
+          <button class="btn btn-danger" type="submit">
+            Delete Reservation
+          </button>
         </form>
       </div>
     </div>
