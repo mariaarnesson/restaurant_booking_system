@@ -11,6 +11,8 @@ The website owner has the ability to accept online reservations for this restaur
 # Table of content
 
 - [User Experience (UX)](#user-experience-ux)
+    - [Strategy](#strategy)
+    - [USER STORIES](#user-stories)
 - [Features](#features)
     - [Existing Features](#existing-features)
     - [Features Left to Implement](#features-which-could-be-implemented-in-the-future)
@@ -27,7 +29,14 @@ The website owner has the ability to accept online reservations for this restaur
 
 
 # User Experience (UX)
+## Strategy:
+
+
 ## USER STORIES:
+
+(Kanban board)[https://github.com/users/mariaarnesson/projects/29/views/1] with my defined (USER STORIES)[https://github.com/mariaarnesson/restaurant_booking_system/issues] and their acceptance criteria are available here.
+
+
 - USER STORY: Navigation bar #1
     - As a **Site User** I can **use navigation menu ** to **switch to other options.**
 - USER STORY: Button Home #2
@@ -66,6 +75,8 @@ The website owner has the ability to accept online reservations for this restaur
     - As a **Site User** I can **choose the online booking option** to **reserve a table**
 - USER STORY: Check reservations #19
     - As a **Site User** I can **select my bookings option** to check **my bookings history.**
+
+ 
 
 # Features
 ## Existing Features
