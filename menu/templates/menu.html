@@ -6,23 +6,15 @@
 <h1 class="text-center"> Please, choose the menu from fellowing bellow: </h1>
 <br><br><br>
 <div class="row row-cols-1 row-cols-md-3 g-4">
-   
-    {% for menu in menus %}
-  
+{% for menu in menus %}  
     <div class="col">
         <a href="{% url 'meal' menu.id %}">
-    <img src="{{ menu.featured_image.url }}" alt="{{ menu.title }}" class="img-fluid card" style="width:30em; height: 22em; border-radius: 1em;" >
+            <img src="{{ menu.featured_image.url }}" alt="{{ menu.title }}" 
+            class="img-fluid card" style="width:30em; height: 22em; border-radius: 1em;">
         </a>
-    <h1> {{ menu.title }} </h1>
-    
-</div>
-
-
-    
-    {% endfor %}
-
-
+        <h1> {{ menu.title }} </h1>   
+    </div>
+{% endfor %}
 </div>
 <br><br><br>
-
 {% endblock %}
