@@ -3,8 +3,6 @@
 {% block head %}
 {% endblock %}
 {% block body %}
-
-
 <br><br><br>
 <section class="v-100 bg-white">
     <div class="container-fluid h-custom">
@@ -13,44 +11,35 @@
           <img src="{{ menu.featured_image.url }}" style="border-radius: 3em;"
             class="img-fluid" alt="Featured Image">
         </div>
-        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 text-black">
-            <div>
-                <h2 >{{ menu.title }}</h2>
-                {% for meal in meals %}
-                <h5 class="text-wrapper" style="color: gold;">{{ meal.mealName }}</h5>
-                <p>_______________________________________________________________ {{ meal.price }} $</p>
-                <p class="text-black">({{ meal.mealDescription }})</p>
-             <br>
-             {% endfor %}
-            </div>
-            
-        </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 text-black">
+        <div>
+          <h2 >{{ menu.title }}</h2>
+          {% for meal in meals %}
+          <h5 class="text-wrapper" style="color: gold;">{{ meal.mealName }}</h5>
+          <p>_______________________________________________________________ {{ meal.price }} $</p>
+          <p class="text-black">({{ meal.mealDescription }})</p>
+          <br>
+          {% endfor %}
+        </div>      
       </div>
     </div>
-
+  </div>
 </section>
 <br><br><br>
-<h1 class="text-center"> Please, choose the menu from fellowing bellow: </h1>
+<h1 class="text-center"> Please, choose the menu from fellowing bellow:</h1>
 <br><br><br>
 <div class="accordion accordion-flush" id="accordionFlushExample">
-<div class="row row-cols-1 row-cols-md-3 g-4">
-   
-    {% for menu in menus %}
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for menu in menus %}
     <div class="col">
-        <a href="{% url 'meal' menu.id %}">
-    <img src="{{ menu.featured_image.url }}" alt="{{ menu.title }}" class="img-fluid card" style="width:30em; height: 22em; border-radius: 1em;" >
-        </a>
-    <h1> {{ menu.title }} </h1>
-    
-</div>
-{% endfor %}
- 
-
-</div>
+      <a href="{% url 'meal' menu.id %}">
+        <img src="{{ menu.featured_image.url }}" alt="{{ menu.title }}" 
+          class="img-fluid card" style="width:30em; height: 22em; border-radius: 1em;" >
+      </a>
+      <h1> {{ menu.title }} </h1>
+    </div>
+  {% endfor %}
+  </div>
 </div>
 <br><br><br>
-
- 
 {% endblock %}
-
-
