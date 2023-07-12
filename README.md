@@ -247,7 +247,7 @@ The presented diagram shows a logical data model.
 ![diagram_reservation](media/diagram_reservation.png)
 # Testing 
 
-Testing information can be found in separate TESTING.md file.
+Testing information can be found in separate [TESTING.md](TESTING.md) file.
 
 
 # Deployment:
