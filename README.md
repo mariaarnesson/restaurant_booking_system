@@ -10,20 +10,20 @@ The website owner has the ability to accept online reservations for this restaur
 
 # Table of content
 
-- [User Experience (UX)]
-- [Features]
-    - [Existing Features]
-    - [Features Left to Implement]
-- [Design]
-    - [Wireframe]
-- [Testing]
-- [Deployment]
-- [Technologies Used]
-    - [Languages Used]
-    - [Frameworks, Libraries and Programs Used]
-- [Credits]
-    - [Code]
-    - [Media]
+- [User Experience (UX)](#user-experience-ux)
+- [Features](#features)
+    - [Existing Features](#existing-features)
+    - [Features Left to Implement](#features-which-could-be-implemented-in-the-future)
+- [Design](#design)
+    - [Wireframe](#wireframe)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Technologies Used](#technologies-used)
+    - [Languages Used](#languages-used)
+    - [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
+- [Credits](#credits)
+    - [Code](#code)
+    - [Media](#media)
 
 
 # User Experience (UX)
