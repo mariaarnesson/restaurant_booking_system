@@ -14,6 +14,8 @@ def reservation(request):
 
 
 class MyBookingsView(View):
+    template_name = 'mybookings.html'
+
     def get(self, request):
         if request.user.is_authenticated:
             online_bookings = OnlineBooking.objects.filter(user=request.user).order_by('date')
@@ -30,6 +32,7 @@ class MyBookingsView(View):
 
 
 class OnlineBookingView(View):
+    template_name = 'online_booking.html'
     total_tables = 10
     max_bookings_per_day = 10
 
@@ -125,6 +128,7 @@ class OnlineBookingView(View):
 
 class EditBookingView(View):
 
+    template_name = 'edit_booking.html'
     total_tables = 10
     max_bookings_per_day = 10
 
@@ -204,6 +208,7 @@ class EditBookingView(View):
 
 
 class DeleteBookingView(View):
+    template_name = 'delete_booking.html'
 
     def get(self, request, booking_id):
         booking = get_object_or_404(
