@@ -34,7 +34,7 @@ The website owner has the ability to accept online reservations for this restaur
 
 ## USER STORIES:
 
-(Kanban board)[https://github.com/users/mariaarnesson/projects/29/views/1] with my defined (USER STORIES)[https://github.com/mariaarnesson/restaurant_booking_system/issues] and their acceptance criteria are available here.
+[Kanban board](https://github.com/users/mariaarnesson/projects/29/views/1) with my defined [USER STORIES](https://github.com/mariaarnesson/restaurant_booking_system/issues) and their acceptance criteria are available here.
 
 
 - USER STORY: Navigation bar #1
