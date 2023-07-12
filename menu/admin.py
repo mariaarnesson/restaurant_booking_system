@@ -1,13 +1,9 @@
 from django.contrib import admin
-from .models import Menu, Meal, Drink
+from .models import Menu, Meal
 
 
 class MealInline(admin.TabularInline):
     model = Meal
-
-
-class DrinkInline(admin.TabularInline):
-    model = Drink    
 
 
 class MenuAdmin(admin.ModelAdmin):
@@ -16,4 +12,4 @@ class MenuAdmin(admin.ModelAdmin):
 
 admin.site.register(Menu, MenuAdmin)
 admin.site.register(Meal)
-admin.site.register(Drink)
+

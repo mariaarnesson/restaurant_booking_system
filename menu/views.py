@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Menu, Meal, Drink
+from .models import Menu, Meal
 
 
 def menu_view(request):
@@ -10,5 +10,7 @@ def menu_view(request):
 
 def meal_view(request, menu_id):
     menu = get_object_or_404(Menu, pk=menu_id)
+    menus = Menu.objects.all() 
     meals = menu.meal_set.all()
-    return render(request, 'meal.html', {'meals': meals})
+    return render(request, 'meal.html', {'menu': menu, 'menus': menus, 'meals': meals})
+
