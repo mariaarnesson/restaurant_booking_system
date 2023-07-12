@@ -125,15 +125,15 @@ The website owner has the ability to accept online reservations for this restaur
 
     - Menu- main dishes
 
-    ![Menu main dishes](media/menu_main_dishes.png)
+    ![Menu main dishes](media/menu_main_dishes.jpeg)
 
     - Menu- drinks
 
-    ![Menu drinks](media/menu_drinks.png)
+    ![Menu drinks](media/menu_drinks.jpeg)
 
     - Menu- desserts
 
-    ![Menu desserts](media/menu_desserts.png)
+    ![Menu desserts](media/menu_desserts.jpeg)
 
     - Booking Online Page
     - The user has to be logged in to reserve a table. There is a possibility to book a table on the online booking website. The user selects the date/time of the reservation from the drop-down list and can select the number of guests from 1 to 5 to indicate how many people they want to include in their booking, and select a occassion from existing in the form. The user then clicks the Add reservation button to complete the booking and is redirected to the My Bookings page to see all upcoming and past bookings.
