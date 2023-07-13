@@ -102,7 +102,8 @@ class OnlineBookingView(View):
                         self.max_bookings_per_day):
                     messages.error(
                         request,
-                        'No more tables available for the selected date and time.'
+                        'No more tables available for'
+                        ' the selected date and time.'
                     )
                     return redirect('online_booking')
 
@@ -185,7 +186,7 @@ class EditBookingView(View):
             booked_tables_on_reservation_date = (
                 OnlineBooking.objects
                 .filter(date=reservation.date, time=reservation.time)
-                .exclude(id=booking_id)  # Exclude the current booking from count
+                .exclude(id=booking_id)
                 .count()
             )
 
