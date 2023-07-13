@@ -14,6 +14,10 @@ def reservation(request):
 
 
 class MyBookingsView(View):
+    """
+    Summary of the table reservation with the data provided
+    in the form and confirmation of the status.
+    """
     template_name = 'mybookings.html'
 
     def get(self, request):
