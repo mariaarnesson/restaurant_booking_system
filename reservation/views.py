@@ -50,6 +50,9 @@ class OnlineBookingView(View):
     max_bookings_per_day = 10
 
     def get_available_slots(self, date):
+        """
+        Specification of of possible booking times for each day.
+        """
 
         available_slots = []
 
@@ -67,6 +70,9 @@ class OnlineBookingView(View):
         return available_slots
 
     def get(self, request):
+        """
+        Specification of the data entered into the form.
+        """
 
         current_date = datetime.now().date()
         form = OnlineBookingForm()
@@ -87,6 +93,9 @@ class OnlineBookingView(View):
         return render(request, 'online_booking.html', context)
 
     def post(self, request):
+        """
+        Checking if the form is correctly filled out.
+        """
 
         form = OnlineBookingForm(request.POST)
 
@@ -145,12 +154,20 @@ class OnlineBookingView(View):
 
 
 class EditBookingView(View):
+    """
+    Displaying the form necessary to edit the reservation.
+    Specifation of the number of tables available for booking.
+    Specification of the maximum number of bookings per day.
+    """
 
     template_name = 'edit_booking.html'
     total_tables = 10
     max_bookings_per_day = 10
 
     def get_available_slots(self, date):
+        """
+        Specification of of possible booking times for each day.
+        """
         booked_tables = OnlineBooking.objects.filter(date=date).count()
         available_slots = []
 
@@ -164,6 +181,9 @@ class EditBookingView(View):
         return available_slots
 
     def get(self, request, booking_id):
+        """
+        Specification of the data entered into the form.
+        """
         booking = get_object_or_404(
             OnlineBooking,
             id=booking_id,
@@ -176,6 +196,9 @@ class EditBookingView(View):
         return render(request, 'edit_booking.html', context)
 
     def post(self, request, booking_id):
+        """
+        Checking if the form is correctly filled out.
+        """
         booking = get_object_or_404(
             OnlineBooking,
             id=booking_id,
