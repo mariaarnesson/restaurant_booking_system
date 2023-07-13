@@ -55,6 +55,7 @@ class ViewsTest(TestCase):
             'special_request': 'Some special request',
         }
         response = self.client.post(reverse('online_booking'), data)
+        print(response.content.decode())
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, '/mybookings/')
 
