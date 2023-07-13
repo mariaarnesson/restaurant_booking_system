@@ -22,7 +22,7 @@ class MyBookingsView(View):
                 OnlineBooking.objects
                 .filter(user=request.user)
                 .order_by('date')
-            )    
+            )
             context = {
                 'online_bookings': online_bookings,
             }
@@ -50,8 +50,8 @@ class OnlineBookingView(View):
                 OnlineBooking.objects
                 .filter(date=date, time=time)
                 .count()
-            ) 
-            remaining_slots = self.total_tables - booked_tables          
+            )
+            remaining_slots = self.total_tables - booked_tables
             if remaining_slots > 0:
                 available_slots.append((time, remaining_slots))
 
