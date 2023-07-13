@@ -40,6 +40,11 @@ class MyBookingsView(View):
 
 
 class OnlineBookingView(View):
+    """
+    Displaying the form necessary to book a table.
+    Specifation of the number of tables available for booking.
+    Specification of the maximum number of bookings per day.
+    """
     template_name = 'online_booking.html'
     total_tables = 10
     max_bookings_per_day = 10
