@@ -249,9 +249,16 @@ class EditBookingView(View):
 
 
 class DeleteBookingView(View):
+    """
+    Displaying the reservation that 
+    the user has possibility to delete.
+    """
     template_name = 'delete_booking.html'
 
     def get(self, request, booking_id):
+        """
+        Presentation of the reservation details.
+        """
         booking = get_object_or_404(
             OnlineBooking,
             id=booking_id,
@@ -263,6 +270,9 @@ class DeleteBookingView(View):
         return render(request, 'delete_booking.html', context)
 
     def post(self, request, booking_id):
+        """
+        Checking if the form is correctly filled out.
+        """
         booking = get_object_or_404(
             OnlineBooking,
             id=booking_id,
