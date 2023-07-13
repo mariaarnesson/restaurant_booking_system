@@ -250,7 +250,7 @@ class EditBookingView(View):
 
 class DeleteBookingView(View):
     """
-    Displaying the reservation that 
+    Displaying the reservation that
     the user has possibility to delete.
     """
     template_name = 'delete_booking.html'
