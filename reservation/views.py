@@ -18,7 +18,11 @@ class MyBookingsView(View):
 
     def get(self, request):
         if request.user.is_authenticated:
-            online_bookings = OnlineBooking.objects.filter(user=request.user).order_by('date')
+            online_bookings = (
+                OnlineBooking.objects
+                .filter(user=request.user)
+                .order_by('date')
+            )    
             context = {
                 'online_bookings': online_bookings,
             }
@@ -42,9 +46,12 @@ class OnlineBookingView(View):
 
         for time_choice, _ in OnlineBooking.TIME_CHOICES:
             time = time_choice
-            booked_tables = OnlineBooking.objects.filter(date=date, time=time).count()
-            remaining_slots = self.total_tables - booked_tables
-            
+            booked_tables = (
+                OnlineBooking.objects
+                .filter(date=date, time=time)
+                .count()
+            ) 
+            remaining_slots = self.total_tables - booked_tables          
             if remaining_slots > 0:
                 available_slots.append((time, remaining_slots))
 
@@ -91,7 +98,8 @@ class OnlineBookingView(View):
                     .count()
                 )
 
-                if booked_tables_on_reservation_date >= self.max_bookings_per_day:
+                if (booked_tables_on_reservation_date >=
+                        self.max_bookings_per_day):
                     messages.error(
                         request,
                         'No more tables available for the selected date and time.'
