@@ -6,30 +6,32 @@
 {% load account socialaccount %}
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 {% block body %}
-<section class="v-100">
-  <div class="container-fluid h-custom">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src="https://img.freepik.com/free-vector/access-control-system-abstract-concept_335657-3180.jpg?w=826&t=st=1684351636~exp=1684352236~hmac=4bee49da49d57ba4883c3d0f7e5a4f9e284def7f67e3a6e440d7a2afb4d24495"
-          class="img-fluid" alt="Sample image">
+<section class="text-center text-lg-start">
+  <div class="container py-4">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0"> 
+        <img src="https://img.freepik.com/free-vector/professional-chefs-cooking-culinary-chefs-hand-drawn-sketch-vector-illustration_460848-14929.jpg?w=740&t=st=1689230123~exp=1689230723~hmac=cecebba9b7cbb42f562720e9fdca7b1452e51e9806af329ab5a9b0f92f45efb4"
+            class="w-100 h-100 rounded-4 shadow-4" alt="a cook">
       </div>
-      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-0">
-        <form class="login" method="POST" action="{% url 'account_login' %}">
-          <h2 class="fw-bold mb-2 text-uppercase">{% trans "Sign In" %}</h2>
-          <p class="text-white-50 mb-5">Please login to your account</p>
-          {% csrf_token %}
-          {{ form.as_p }}
-          {% if redirect_field_value %}
-          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
-          {% endif %}
-          <button class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
-          <div class="d-flex align-items-center justify-content-center pb-4">
-            <p class="mb-0 me-2">Don't have an account?</p>
-            <a href="{% url 'account_signup' %}" class="btn btn-outline-danger text-white-50 fw-bold">Create new</a>
-          </div>
-        </form>
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card cascading-right">     
+          <form class="login" method="POST" action="{% url 'account_login' %}">
+            <h2 class="fw-bold mb-2 text-uppercase">{% trans "Sign In" %}</h2>
+            <p class="text-white-50 mb-5">Please login to your account</p>
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+            {% endif %}
+            <button class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
+            <div class="d-flex align-items-center justify-content-center pb-4">
+              <p class="mb-0 me-2">Don't have an account?</p>
+              <a href="{% url 'account_signup' %}" class="btn btn-outline-danger text-white-50 fw-bold">Create new</a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>  
+  </div>
 </section>
 {% endblock %}
