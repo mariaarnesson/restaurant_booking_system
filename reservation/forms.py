@@ -1,5 +1,6 @@
 from django import forms
 from .models import No_of_guest, OnlineBooking
+from datetime import date, timedelta
 
 
 class OnlineBookingForm(forms.ModelForm):
