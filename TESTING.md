@@ -99,6 +99,8 @@
 
 - Python
     - [Python pep8](https://pep8ci.herokuapp.com/#) was used to validate Python code.
+    - Result for Menu views.py:
+        - [Result menu views.py](media/test/validation_result_menu_views_python.png)
 
 ## Manual Testing 
 ### User Stories Testing
