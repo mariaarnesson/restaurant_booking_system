@@ -48,6 +48,11 @@
             - [Result meal html part3](media/test/validator_result_meal_html_part3.png)
             - [Result meal html part4](media/test/validator_result_meal_html_part4.png)
 
+    - result for online_booking.html:
+        - [Result online booking html part1](media/test/validator_result_online_booking_html_part1.png)
+        - [Result online booking html part2](media/test/validator_result_online_booking_html_part2.png)
+        - [Result online booking html part3](media/test/validator_result_online_booking_html_part3.png)
+        - [Result online booking html part4](media/test/validator_result_online_booking_html_part4.png)
 
     - result for login.html:
         - [Result login html part1](media/test/validator_result_login_html_part1.png)
