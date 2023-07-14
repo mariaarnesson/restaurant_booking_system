@@ -8,6 +8,7 @@ from .views import (
     DeleteBookingView,
 )
 
+
 class UrlsTest(SimpleTestCase):
 
     def test_reservation_url(self):

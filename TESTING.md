@@ -32,10 +32,18 @@
         - [Result home html part5](media/test/validator_result_home_html_part5.png)
         - [Result home html part6](media/test/validator_result_home_html_part6.png)
 
+    - resulr for menu.html:
+        - [Result menu html part1](media/test/validator_result_menu_html_part1.png)
+        - [Result menu html part2](media/test/validator_result_menu_html_part2.png)
+        - [Result menu html part3](media/test/validator_result_menu_html_part3.png)
+        
+
     - result for login.html:
         - [Result login html part1](media/test/validator_result_login_html_part1.png)
         - [Result login html part2](media/test/validator_result_login_html_part2.png)
-        - [Result login html part2](media/test/validator_result_login_html_part3.png)    
+        - [Result login html part2](media/test/validator_result_login_html_part3.png)
+
+
 
 
 - W3C CSS validation CSS
