@@ -98,7 +98,7 @@
     
 
 - Python
-    - [Python visual studio](https://marketplace.visualstudio.com/items?itemName=ms-python.python) was used to validate Python code.
+    - [Python pep8](https://pep8ci.herokuapp.com/#) was used to validate Python code.
 
 ## Manual Testing 
 ### User Stories Testing
