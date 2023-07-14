@@ -39,14 +39,14 @@
 
     - result for meal.html:
         - [Result meal html part1](media/test/validator_result_meal_html_part1.png)
+            - result for meal.html Desserts:
+                - [Result meal html part2 Desserts](media/test/validator_result_meal_html_part2_dessert.png)
             - result for meal.html Main Dishes:
                 - [Result meal html part2 Main Dishes](media/test/validator_result_meal_html_part2_main_dishes.png)  
-            - result for meal.html Desserts:
-                - [Result meal html part2 Desserts](media/test/validator_result_meal_html_part2_desserts.png)
             - result for meal.html Drinks:
                 - [Result meal html part2 Drinks](media/test/validator_result_meal_html_part2_drinks.png)
             - [Result meal html part3](media/test/validator_result_meal_html_part3.png)
-            - [Result meal html part4](media/test/validator_result_meal_html_part4.png)    
+            - [Result meal html part4](media/test/validator_result_meal_html_part4.png)
 
 
     - result for login.html:
