@@ -34,10 +34,10 @@ class ViewsTest(TestCase):
         response = self.client.get(reverse('mybookings'))
         self.assertEqual(response.status_code, 200)
 
-#    def test_my_bookings_view_unauthenticated(self):
-#        response = self.client.get(reverse('mybookings'))
-#        self.assertEqual(response.status_code, 302)
-#        self.assertRedirects(response, '/login/')
+    def test_my_bookings_view_unauthenticated(self):
+        response = self.client.get(reverse('mybookings'))
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, '/accounts/login/')
 
     def test_online_booking_view_get(self):
         response = self.client.get(reverse('online_booking'))
