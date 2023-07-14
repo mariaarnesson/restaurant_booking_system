@@ -54,6 +54,13 @@
         - [Result online booking html part3](media/test/validator_result_online_booking_html_part3.png)
         - [Result online booking html part4](media/test/validator_result_online_booking_html_part4.png)
 
+    - result for mybookings.html:
+        - [Result my bookings html part1](media/test/validator_result_mybookings_html_part1.png)
+        - [Result my bookings html part2](media/test/validator_result_mybookings_html_part2.png)
+        - [Result my bookings html part3](media/test/validator_result_mybookings_html_part3.png)
+        - [Result my bookings html part4](media/test/validator_result_mybookings_html_part4.png)
+
+
     - result for login.html:
         - [Result login html part1](media/test/validator_result_login_html_part1.png)
         - [Result login html part2](media/test/validator_result_login_html_part2.png)
