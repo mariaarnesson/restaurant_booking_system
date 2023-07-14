@@ -99,8 +99,19 @@
 
 - Python
     - [Python pep8](https://pep8ci.herokuapp.com/#) was used to validate Python code.
+
     - Result for Menu views.py:
         - [Result menu views.py](media/test/validation_result_menu_views_python.png)
+
+    - Result for Reservation views.py:
+        - [Result reservation views.py part1](media/test/validation_result_reservation_python_part1.png)  
+        - [Result reservation views.py part2](media/test/validation_result_reservation_python_part2.png)  
+        - [Result reservation views.py part3](media/test/validation_result_reservation_python_part3.png)  
+        - [Result reservation views.py part4](media/test/validation_result_reservation_python_part4.png)  
+        - [Result reservation views.py part5](media/test/validation_result_reservation_python_part5.png)  
+        - [Result reservation views.py part6](media/test/validation_result_reservation_python_part6.png)  
+        - [Result reservation views.py part7](media/test/validation_result_reservation_python_part7.png)  
+        - [Result reservation views.py part8](media/test/validation_result_reservation_python_part8.png)    
 
 ## Manual Testing 
 ### User Stories Testing
