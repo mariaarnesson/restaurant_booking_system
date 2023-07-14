@@ -284,17 +284,15 @@ Detailed instructions for configuring and deploying the application are describe
     - The app should appear in a new tab on the web browser
     - The live link can be found here - [View the live project here]()
 
-Here are the final steps that should be taken to deploy the application:
+    Here are the final steps that should be taken to deploy the application:
 
-The application can be prepared for Heroku deployment, when code changes have been completed and tested on localhost.
+- The application can be prepared for Heroku deployment, when code changes have been completed and tested on localhost.
 
-- in settings.py the DEBUG flag should be set to False.
-- in settings.py 'X_FRAME_OPTIONS' should be set to 'SAMEORIGIN'.
-- use the command: 'pip3 freeze --local > requirements.txt' to make the requirements.txt file up-to-date.
-- Config Vars 'DISABLE_COLLECTSTATIC' in Heroku should be now deleted. 
-- On the Heroku dashboard go to the Deploy tab for the application and click on deploy branch.
-
-
+    - in settings.py the DEBUG flag should be set to False.
+    - in settings.py 'X_FRAME_OPTIONS' should be set to 'SAMEORIGIN'.
+    - use the command: 'pip3 freeze --local > requirements.txt' to make the requirements.txt file up-to-date.
+    - Config Vars 'DISABLE_COLLECTSTATIC' in Heroku should be now deleted. 
+    - On the Heroku dashboard go to the Deploy tab for the application and click on deploy branch.
 
 
 -  Detailed desciption steps to clone the repository:
