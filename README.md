@@ -251,6 +251,16 @@ Testing information can be found in separate [TESTING.md](TESTING.md) file.
 
 
 # Deployment:
+
+[Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template) was used to create my Django application.
+
+    This is fellows steps, which was made:
+    - Click the 'Use this template' button.
+    - Add the name of the repository.
+    - Add a description of the respository.
+    - Press button 'Create repository' to create a repository.
+    - On GitHub dashboard, press button 'Gitpod' to create Gitpod Workspace.   
+
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
    
     - Login to Heroku
