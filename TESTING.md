@@ -59,6 +59,10 @@
         - [Result login html part2](media/test/validator_result_login_html_part2.png)
         - [Result login html part2](media/test/validator_result_login_html_part3.png)
 
+    - result for signup.html:
+        - [Result signup html part1](media/test/validator_result_signup_html_part1.png)
+        - [Result signup html part2](media/test/validator_result_signup_html_part2.png)
+        - [Result signup html part3](media/test/validator_result_signup_html_part3.png)
 
 
 
