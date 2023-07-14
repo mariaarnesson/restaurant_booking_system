@@ -83,6 +83,11 @@
         - [Result signup html part2](media/test/validator_result_signup_html_part2.png)
         - [Result signup html part3](media/test/validator_result_signup_html_part3.png)
 
+    - result for logout.html:
+        - [Result logout html part1](media/test/validator_result_log_out_html_part1.png)    
+        - [Result logout html part1](media/test/validator_result_logout_html_part2.png)    
+        - [Result logout html part1](media/test/validator_result_logout_html_part3.png)
+
 
 
 - W3C CSS validation CSS
