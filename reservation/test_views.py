@@ -14,7 +14,10 @@ class ViewsTest(TestCase):
 
     def setUp(self):
         self.factory = RequestFactory()
-        self.user = User.objects.create_user(username='testuser', password='testpassword')
+        self.user = User.objects.create_user(
+            username='testuser',
+            password='testpassword'
+        )
         self.no_of_guest = No_of_guest.objects.create(guest=2)
         self.booking = OnlineBooking.objects.create(
             user=self.user,
@@ -61,7 +64,9 @@ class ViewsTest(TestCase):
 
     def test_edit_booking_view_get(self):
         self.client.force_login(self.user)
-        response = self.client.get(reverse('edit_booking', args=[self.booking.id]))
+        response = self.client.get(
+            reverse('edit_booking', args=[self.booking.id])
+        )
         self.assertEqual(response.status_code, 200)
 
     def test_edit_booking_view_post(self):
@@ -76,17 +81,23 @@ class ViewsTest(TestCase):
             'table': 'Family table',
             'special_request': 'Some special request',
         }
-        response = self.client.post(reverse('edit_booking', args=[self.booking.id]), data)
+        response = self.client.post(
+            reverse('edit_booking', args=[self.booking.id]), data
+        )
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, '/mybookings/')
 
     def test_delete_booking_view_get(self):
         self.client.force_login(self.user)
-        response = self.client.get(reverse('delete_booking', args=[self.booking.id]))
+        response = self.client.get(
+            reverse('delete_booking', args=[self.booking.id])
+        )
         self.assertEqual(response.status_code, 200)
 
     def test_delete_booking_view_post(self):
         self.client.force_login(self.user)
-        response = self.client.post(reverse('delete_booking', args=[self.booking.id]))
+        response = self.client.post(
+            reverse('delete_booking', args=[self.booking.id])
+        )
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, '/mybookings/')
