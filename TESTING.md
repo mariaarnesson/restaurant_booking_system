@@ -60,6 +60,12 @@
         - [Result my bookings html part3](media/test/validator_result_mybookings_html_part3.png)
         - [Result my bookings html part4](media/test/validator_result_mybookings_html_part4.png)
 
+    - reult for edit_booking.html:
+        - [Result edit booking html part1](media/test/validator_result_edit_booking_html_part1.png)  
+        - [Result edit booking html part1](media/test/validator_result_edit_booking_html_part2.png)  
+        - [Result edit booking html part1](media/test/validator_result_edit_booking_html_part3.png)  
+        - [Result edit booking html part1](media/test/validator_result_edit_booking_html_part4.png)    
+
 
     - result for login.html:
         - [Result login html part1](media/test/validator_result_login_html_part1.png)
