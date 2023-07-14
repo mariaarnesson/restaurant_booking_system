@@ -64,7 +64,13 @@
         - [Result edit booking html part1](media/test/validator_result_edit_booking_html_part1.png)  
         - [Result edit booking html part1](media/test/validator_result_edit_booking_html_part2.png)  
         - [Result edit booking html part1](media/test/validator_result_edit_booking_html_part3.png)  
-        - [Result edit booking html part1](media/test/validator_result_edit_booking_html_part4.png)    
+        - [Result edit booking html part1](media/test/validator_result_edit_booking_html_part4.png)
+
+    - result for delete_booking.html:
+        - [Result delete booking html part1](media/test/validator_result_delete_booking_html_part1.png)  
+        - [Result delete booking html part2](media/test/validator_result_delete_booking_html_part2.png)  
+        - [Result delete booking html part3](media/test/validator_result_delete_booking_html_pert3.png)  
+        - [Result delete booking html part4](media/test/validator_result_delete_booking_html_part4.png)     
 
 
     - result for login.html:
