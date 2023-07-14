@@ -252,6 +252,8 @@ Testing information can be found in separate [TESTING.md](TESTING.md) file.
 
 # Deployment:
 
+Detailed instructions for configuring and deploying the application are described below. For summary information see: [CI Cheat Sheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf).
+
 [Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template) was used to create my Django application.
 
     This is fellows steps, which was made:
@@ -269,6 +271,7 @@ Testing information can be found in separate [TESTING.md](TESTING.md) file.
     - Enter region of the app
     - Navigate to the Settings tab.
     - In 'Config Vars' select 'PORT' as a key to and '8000' as a value
+    - In 'Config Vars' select 'DISABLE_COLLECTSTATIC' as a key to and '1' as a value.
     - In 'Config Vars' select 'DATABASE_URL' as a key and select value
     - In 'Config Vars' select 'SECRET_KEY' as a key and select value
     - In 'Config Vars' select 'CLOUDINARY_URL' as a key and select value
@@ -280,6 +283,32 @@ Testing information can be found in separate [TESTING.md](TESTING.md) file.
     - Select 'Open app' on the right hand side of the screen
     - The app should appear in a new tab on the web browser
     - The live link can be found here - [View the live project here]()
+
+Here are the final steps that should be taken to deploy the application:
+
+The application can be prepared for Heroku deployment, when code changes have been completed and tested on localhost.
+
+- in settings.py the DEBUG flag should be set to False.
+- in settings.py 'X_FRAME_OPTIONS' should be set to 'SAMEORIGIN'.
+- use the command: 'pip3 freeze --local > requirements.txt' to make the requirements.txt file up-to-date.
+- Config Vars 'DISABLE_COLLECTSTATIC' in Heroku should be now deleted. 
+- On the Heroku dashboard go to the Deploy tab for the application and click on deploy branch.
+
+
+
+
+-  Detailed desciption steps to clone the repository:
+    - go to this page: https://github.com/mariaarnesson/restaurant_booking_system
+    - press button 'Code' and copy the link placed under HTTPS.
+    - after opening GitBush terminal, you should navigate to the directory and locate the clone. 
+    - to begin the clone process, on the command line, type "git clone" then paste in the copied url and press the Enter key.
+    - use the command : pip install -r requirements.txt to install the packages required by the application. 
+    - set DEBUG=True in the settings.py file, to developing and running the application locally.
+    - using the following commands, changes made to the local clone can be pushed back to the repository:
+        - git add . (or filenames)
+        - git commit -m "describe a message with changes that have been made"
+        - git push
+    - N.B. Any changes pushed to the master branch will take effect on the live project once the application is re-deployed from Heroku
 # Planning
 ## Technologies Used
 ### Languages Used
