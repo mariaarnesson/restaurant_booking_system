@@ -256,7 +256,7 @@ Here is described how my project got deployed to Heroku. The steps were done usi
 
 ## Deploying the app to Heroku
 
-- Create a Heroku app.
+### Create a Heroku app.
 To create a [Heroku](https://dashboard.heroku.com) application, after log in, on the main page you should press the button: 'New', which is located on the upper right side. From the dropdown you should select: 'Create new app' option. Then you go to the next page, where you should fill a form with the following data: 'App name' and 'Choose a region', and then you should press button: 'Create app'.
 
 Once the Heroku app is created, the next step is to go to option: 'settings'. In the category called 'Config Vars', you should press 'Reveal Config Vars' button, and then you have possibility to enter the KAY and VALUE for individual properties of:
