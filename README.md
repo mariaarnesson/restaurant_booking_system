@@ -252,7 +252,28 @@ Testing information can be found in separate [TESTING.md](TESTING.md) file.
 
 # Deployment:
 
-Detailed instructions for configuring and deploying the application are described below. For summary information see: [CI Cheat Sheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf).
+Here is described how my project got deployed to Heroku. The steps were done using [Django Blog Cheat Sheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf).
+
+- Deploying the app to Heroku
+
+    - Create a Heroku app.
+    To create a [Heroku](https://dashboard.heroku.com) application, after log in, on the main page you should press the button: 'New', which is located on the upper right side. From the dropdown you should select: 'Create new app' option. Then you go to the next page, where you should fill a form with the following data: 'App name' and 'Choose a region', and then you should press button: 'Create app'.
+
+    Once the Heroku app is created, the next step is to go to option: 'settings'. In the category called 'Config Vars', you should press 'Reveal Config Vars' button, and then you have possibility to enter the KAY and VALUE for ndividual properties of:
+
+        - DATABASE_URL:
+
+
+        - SECRET_KEY
+        - CLOUDINARY_URL
+        - DISABLE_COLLECTSTATIC
+        - PORT
+
+
+
+
+
+Detailed instructions for configuring and deploying the application are described below. For summary information see: [CI Cheat Sheet]().
 
 [Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template) was used to create my Django application.
 
