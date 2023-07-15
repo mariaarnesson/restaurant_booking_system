@@ -14,10 +14,11 @@ h2 {
     letter-spacing: 0px;
     font-size: 30px;
 }
+/*
 form {
 	margin:10% auto 0 auto;
 	padding:30px;
-	width:300px;
+	width:400px;
 	height:auto;
 	overflow:hidden;
 	background:white;
@@ -36,10 +37,15 @@ form input {
 	clear:both;
 }
 
+form checkbox {
+	float:left;
+	clear:both;
+}
+
 form input, select, textarea {
 	margin:15px 0;
 	padding:15px 10px;
-	width:100%;
+	width:80%;
 	outline:none;
 	border:1px solid #bbb;
 	border-radius:20px;
@@ -56,7 +62,7 @@ form input, select, textarea {
 
 form input, select, textarea [type=text]:focus,
 form input[type="password"]:focus {
-	border-color:cornflowerblue;
+	border-color:rgb(26, 28, 32);
 }
 
 input[type=submit] {
@@ -87,6 +93,7 @@ input[type="submit"]:active {
 	margin-top: -1em;
     margin-left: -4em;
 }
+*/
 .accordion {
 	margin: 3em;
 }

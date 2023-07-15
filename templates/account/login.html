@@ -6,6 +6,7 @@
 {% load account socialaccount %}
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 {% block body %}
+{% load crispy_forms_tags %}
 <section class="text-center text-lg-start">
   <div class="container py-4">
     <div class="row g-0 align-items-center">
@@ -19,7 +20,7 @@
             <h2 class="fw-bold mb-2 text-uppercase">{% trans "Sign In" %}</h2>
             <p class="text-white-50 mb-5">Please login to your account</p>
             {% csrf_token %}
-            {{ form.as_p }}
+            {{ form | crispy }}
             {% if redirect_field_value %}
             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
             {% endif %}
