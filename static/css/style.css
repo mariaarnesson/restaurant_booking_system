@@ -94,6 +94,15 @@ input[type="submit"]:active {
     margin-left: -4em;
 }
 */
+form {
+	margin: 2em;
+}
+label {
+	float: left;
+}
+input {
+	width: 50%;
+}
 .accordion {
 	margin: 3em;
 }
