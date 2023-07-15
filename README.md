@@ -254,23 +254,32 @@ Testing information can be found in separate [TESTING.md](TESTING.md) file.
 
 Here is described how my project got deployed to Heroku. The steps were done using [Django Blog Cheat Sheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf).
 
-- Deploying the app to Heroku
+## Deploying the app to Heroku
 
-    - Create a Heroku app.
-    To create a [Heroku](https://dashboard.heroku.com) application, after log in, on the main page you should press the button: 'New', which is located on the upper right side. From the dropdown you should select: 'Create new app' option. Then you go to the next page, where you should fill a form with the following data: 'App name' and 'Choose a region', and then you should press button: 'Create app'.
+- Create a Heroku app.
+To create a [Heroku](https://dashboard.heroku.com) application, after log in, on the main page you should press the button: 'New', which is located on the upper right side. From the dropdown you should select: 'Create new app' option. Then you go to the next page, where you should fill a form with the following data: 'App name' and 'Choose a region', and then you should press button: 'Create app'.
 
-    Once the Heroku app is created, the next step is to go to option: 'settings'. In the category called 'Config Vars', you should press 'Reveal Config Vars' button, and then you have possibility to enter the KAY and VALUE for individual properties of:
+Once the Heroku app is created, the next step is to go to option: 'settings'. In the category called 'Config Vars', you should press 'Reveal Config Vars' button, and then you have possibility to enter the KAY and VALUE for individual properties of:
 
-    - DATABASE_URL:
+ - DATABASE_URL:
 
     To create DATABASE_URL, you need log in to the [ElephantSQL](https://www.elephantsql.com/). On the top right side of this page, you need to press button: 'Creata New Instance'. Then you need to fill out a short form, where you select a plan and name. After that you should press 'Select Region'button. After entering the region, press the button: 'review' and then your instance is created. On your instance's panel, you can see the details. Then you should copy the link, which is placed next to option 'URL'. 
 
     This link is needed to enter as VALUE to KEY - DATABASE_URL to Config Vars on Heroku.
 
-    - SECRET_KEY
+ - SECRET_KEY
+    
+    To create a SECRET_KEY you can use the [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/). You should press a button: 'Generate Django Secret Key' and copy Generated Django Secret Key.
 
+    This key is needed to enter as VALUE to KEY - SECRET_KEY to Config Vars on Heroku.
 
-    - CLOUDINARY_URL
+    
+- CLOUDINARY_URL
+
+    To create CLOUDINARY_URL, you need log in to the [Cloudinary](https://cloudinary.com/). By pressing the option 'dashboard', you will be taken to the page where the Product Environment Credentials is aviliable. Nex to the option 'API Environment variable', there is a link you should copy.
+
+    This link is needed to enter as VALUE to KEY - CLOUDINARY_URL to Config Vars on Heroku.
+
     - DISABLE_COLLECTSTATIC
     - PORT
 
