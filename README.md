@@ -332,18 +332,18 @@ The live link can be found here - [View the live project here](https://portfolio
 
 
 ## Detailed desciption steps to clone the repository:
-    - go to this page: https://github.com/mariaarnesson/restaurant_booking_system
-    - press button 'Code' and copy the link placed under HTTPS.
-    - after opening GitBush terminal, you should navigate to the directory and locate the clone. 
-    - to begin the clone process, on the command line, type "git clone" then paste in the copied url and press the Enter key.
-    - use the command : pip install -r requirements.txt to install the packages required by the application. 
-    - set DEBUG=True in the settings.py file, to developing and running the application locally.
-    - using the following commands, changes made to the local clone can be pushed back to the repository:
-        - git add . (or filenames)
-        - git commit -m "describe a message with changes that have been made"
-        - git push
-    - N.B. Any changes pushed to the master branch will take effect on the live project once the application is re-deployed from Heroku
-    
+- go to this page: https://github.com/mariaarnesson/restaurant_booking_system
+- press button 'Code' and copy the link placed under HTTPS.
+- after opening GitBush terminal, you should navigate to the directory and locate the clone. 
+- to begin the clone process, on the command line, type "git clone" then paste in the copied url and press the Enter key.
+- use the command : pip install -r requirements.txt to install the packages required by the application. 
+- set DEBUG=True in the settings.py file, to developing and running the application locally.
+- using the following commands, changes made to the local clone can be pushed back to the repository:
+    - git add . (or filenames)
+    - git commit -m "describe a message with changes that have been made"
+    - git push
+- N.B. Any changes pushed to the master branch will take effect on the live project once the application is re-deployed from Heroku
+
 # Planning
 ## Technologies Used
 ### Languages Used
