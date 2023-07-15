@@ -261,31 +261,31 @@ To create a [Heroku](https://dashboard.heroku.com) application, after log in, on
 
 Once the Heroku app is created, the next step is to go to option: 'settings'. In the category called 'Config Vars', you should press 'Reveal Config Vars' button, and then you have possibility to enter the KAY and VALUE for individual properties of:
 
-   - DATABASE_URL:
+- DATABASE_URL:
 
-    To create DATABASE_URL, you need log in to the [ElephantSQL](https://www.elephantsql.com/). On the top right side of this page, you need to press button: 'Creata New Instance'. Then you need to fill out a short form, where you select a plan and name. After that you should press 'Select Region'button. After entering the region, press the button: 'review' and then your instance is created. On your instance's panel, you can see the details. Then you should copy the link, which is placed next to option 'URL'. 
+To create DATABASE_URL, you need log in to the [ElephantSQL](https://www.elephantsql.com/). On the top right side of this page, you need to press button: 'Creata New Instance'. Then you need to fill out a short form, where you select a plan and name. After that you should press 'Select Region'button. After entering the region, press the button: 'review' and then your instance is created. On your instance's panel, you can see the details. Then you should copy the link, which is placed next to option 'URL'. 
 
-    This link is needed to enter as VALUE to KEY - DATABASE_URL to Config Vars on Heroku.
+This link is needed to enter as VALUE to KEY - DATABASE_URL to Config Vars on Heroku.
 
-    - SECRET_KEY
-    
-    To create a SECRET_KEY you can use the [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/). You should press a button: 'Generate Django Secret Key' and copy Generated Django Secret Key.
+- SECRET_KEY
 
-    This key is needed to enter as VALUE to KEY - SECRET_KEY to Config Vars on Heroku.
+To create a SECRET_KEY you can use the [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/). You should press a button: 'Generate Django Secret Key' and copy Generated Django Secret Key.
 
-    
-    - CLOUDINARY_URL
+This key is needed to enter as VALUE to KEY - SECRET_KEY to Config Vars on Heroku.
 
-    To create CLOUDINARY_URL, you need log in to the [Cloudinary](https://cloudinary.com/). By pressing the option 'dashboard', you will be taken to the page where the Product Environment Credentials is aviliable. Nex to the option 'API Environment variable', there is a link you should copy.
 
-    This link is needed to enter as VALUE to KEY - CLOUDINARY_URL to Config Vars on Heroku.
+- CLOUDINARY_URL
 
-    - DISABLE_COLLECTSTATIC
+To create CLOUDINARY_URL, you need log in to the [Cloudinary](https://cloudinary.com/). By pressing the option 'dashboard', you will be taken to the page where the Product Environment Credentials is aviliable. Nex to the option 'API Environment variable', there is a link you should copy.
 
-    Value of DISABLE_COLLECTSTATIC should be 1
+This link is needed to enter as VALUE to KEY - CLOUDINARY_URL to Config Vars on Heroku.
 
-    - PORT
-    Value of PORT should be 8000.
+- DISABLE_COLLECTSTATIC
+
+Value of DISABLE_COLLECTSTATIC should be 1
+
+- PORT
+Value of PORT should be 8000.
 
 ## Creating a respository on GitHub
 
