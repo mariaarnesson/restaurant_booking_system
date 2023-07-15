@@ -293,7 +293,23 @@ Value of PORT should be 8000.
 Below that, there is an option to choose to make your repository private or public.
 Finally, when everything is filled, you should press the button: 'Create repository'.
 
+On the [GitPod Page](https://gitpod.io/workspaces), on the top right side, there is a button: 'New Workspace'. After selected that, you can add a new workspace. In a tab 'Select a repository', you can paste URL link to your repository, which you have built before. After that, eneter button 'Continue', and the workspace will start to build. You have to wait a while the workspace builds up.
+Next you should install Django and supporting libraries:
+1. Install Django and gunicorn with command in terminal: 'pip3 install django gunicorn'
+2. Install supporting libraries with command in terminal: 'pip3 install dj_database_url psycopg2'
+3. Install Cloudinary Libraries with command in terminal: 'pip3 install dj3-cloudinary-storage'
+4. Create requirements file with command in terminal: 'pip3 freeze --local > requirements.txt'
+5. Create Project with command in terminal: 'django-admin startproject PROJ_NAME .'
+6. Create App with command in terminal: 'python3 manage.py startapp APP_NAME'
 
+Now you should create a new env.py file on top of directory level and include database:
+- import os library by typing 'import os' on the top in env.py file.
+- now you should set environment variables by typing:
+    - os.environ["DATABASE_URL"] = "Paste the same value as pasted in Heroku Config Vars"
+    - os.environ["SECRET_KEY"] = "Paste the same value as pasted in Heroku Config Vars"
+    - os.environ["CLOUDINARY_URL"] = "Paste the same value as pasted in Heroku Config Vars"
+
+Now you should create Procfile on the top level directory and type 'web: gunicorn <your project name>.wsgi'.
 
 
 ## Connecting the Heroku application to the GitHub repository
