@@ -309,7 +309,7 @@ Now you should create a new env.py file on top of directory level and include da
     - os.environ["SECRET_KEY"] = "Paste the same value as pasted in Heroku Config Vars"
     - os.environ["CLOUDINARY_URL"] = "Paste the same value as pasted in Heroku Config Vars"
 
-Now you should create Procfile on the top level directory and type 'web: gunicorn <your project name>.wsgi'.
+Now you should create Procfile on the top level directory and type 'web: gunicorn PROJ_NAME.wsgi'.
 
 
 ## Connecting the Heroku application to the GitHub repository
@@ -320,45 +320,7 @@ I use the option: 'Manual deploy'. Next to a option: 'Choose a branch to deploy'
 The live link can be found here - [View the live project here](https://portfolio-project4-restaurant-7e7cbe473f3c.herokuapp.com/).
 
 
-
-
-
-
-
-
-Detailed instructions for configuring and deploying the application are described below. For summary information see: [CI Cheat Sheet]().
-
-[Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template) was used to create my Django application.
-
-    This is fellows steps, which was made:
-    - Click the 'Use this template' button.
-    - Add the name of the repository.
-    - Add a description of the respository.
-    - Press button 'Create repository' to create a repository.
-    - On GitHub dashboard, press button 'Gitpod' to create Gitpod Workspace.   
-
-- The site was deployed to GitHub pages. The steps to deploy are as follows:
-   
-    - Login to Heroku
-    - In the Heroku, select: Create new app
-    - Enter name of the app
-    - Enter region of the app
-    - Navigate to the Settings tab.
-    - In 'Config Vars' select 'PORT' as a key to and '8000' as a value
-    - In 'Config Vars' select 'DISABLE_COLLECTSTATIC' as a key to and '1' as a value.
-    - In 'Config Vars' select 'DATABASE_URL' as a key and select value
-    - In 'Config Vars' select 'SECRET_KEY' as a key and select value
-    - In 'Config Vars' select 'CLOUDINARY_URL' as a key and select value
-    - From the tab on the top, select: Deploy.
-    - Afrerword select Github and connect.
-    - Enter the respository name on Github and select: Search
-    - Click connect button.
-    - In Manual deploy, select the 'Deploy Branch' option
-    - Select 'Open app' on the right hand side of the screen
-    - The app should appear in a new tab on the web browser
-    - The live link can be found here - [View the live project here]()
-
-    Here are the final steps that should be taken to deploy the application:
+## The final steps that should be taken to deploy the application:
 
 - The application can be prepared for Heroku deployment, when code changes have been completed and tested on localhost.
 
@@ -369,7 +331,7 @@ Detailed instructions for configuring and deploying the application are describe
     - On the Heroku dashboard go to the Deploy tab for the application and click on deploy branch.
 
 
--  Detailed desciption steps to clone the repository:
+## Detailed desciption steps to clone the repository:
     - go to this page: https://github.com/mariaarnesson/restaurant_booking_system
     - press button 'Code' and copy the link placed under HTTPS.
     - after opening GitBush terminal, you should navigate to the directory and locate the clone. 
@@ -381,6 +343,7 @@ Detailed instructions for configuring and deploying the application are describe
         - git commit -m "describe a message with changes that have been made"
         - git push
     - N.B. Any changes pushed to the master branch will take effect on the live project once the application is re-deployed from Heroku
+    
 # Planning
 ## Technologies Used
 ### Languages Used
