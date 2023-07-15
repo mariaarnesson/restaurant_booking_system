@@ -263,8 +263,13 @@ Here is described how my project got deployed to Heroku. The steps were done usi
 
         - DATABASE_URL:
 
+        To create DATABASE_URL, you need log in to the [ElephantSQL](https://www.elephantsql.com/). On the top right side of this page, you need to press button: 'Creata New Instance'. Then you need to fill out a short form, where you select a plan and name. After that you should press 'Select Region'button. After entering the region, press the button: 'review' and then your instance is created. On your instance's panel, you can see the details. Then you should copy the link, which is placed next to option 'URL'. 
+
+        This link is needed to enter as VALUE to KEY - DATABASE_URL to Config Vars on Heroku.
 
         - SECRET_KEY
+
+
         - CLOUDINARY_URL
         - DISABLE_COLLECTSTATIC
         - PORT
