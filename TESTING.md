@@ -97,7 +97,10 @@
     
 - JSHint JavaScript
     - [JSHint](https://jshint.com/) was used to validatw JS.
-    
+    Result:
+    - [Result Java Script](media/test/validation_result_javascript.png)
+    The reason for the unused variable: 'anime' message is that the script tag:
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> had been added in the document in base.html that includes the anime.js file.
 
 - Python
     - [Python pep8](https://pep8ci.herokuapp.com/#) was used to validate Python code.

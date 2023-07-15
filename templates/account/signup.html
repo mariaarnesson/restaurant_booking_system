@@ -6,11 +6,12 @@
 {% load account socialaccount %}
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 {% block body %}
+{% load crispy_forms_tags %}
 <section class="text-center text-lg-start">
   <div class="container py-4">
     <div class="row g-0 align-items-center">
       <div class="col-lg-6 mb-5 mb-lg-0"> 
-        <img src="https://img.freepik.com/free-vector/professional-chefs-cooking-culinary-chefs-hand-drawn-sketch-vector-illustration_460848-14929.jpg?w=740&t=st=1689230123~exp=1689230723~hmac=cecebba9b7cbb42f562720e9fdca7b1452e51e9806af329ab5a9b0f92f45efb4"
+        <img src="https://img.freepik.com/free-vector/resume-concept-illustration_114360-103.jpg?w=826&t=st=1684359273~exp=1684359873~hmac=2d7db2f3cac7e4b0a51dddb586dd2965ac3db584c6b57c80a52b643c578a8e3d"
             class="w-100 h-100 rounded-4 shadow-4" alt="a cook">
       </div>
       <div class="col-lg-6 mb-5 mb-lg-0">
@@ -19,10 +20,10 @@
             <h2 class="fw-bold mb-2 text-uppercase">{% trans "Sign Up" %}</h2>
             <div class="d-flex align-items-center justify-content-center pb-4">
               <p class="mb-0 me-2">Already have an account? Please </p>
-              <a href="{{ login_url }}" class="btn btn-outline-danger text-white-50 fw-bold"> Sign In </a>
+              <a href="{{ login_url }}" class="btn btn-danger text-white-50 fw-bold"> Sign In </a>
             </div>
             {% csrf_token %}
-            {{ form.as_p }}
+            {{ form | crispy }}
             {% if redirect_field_value %}
             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
             {% endif %}
