@@ -259,20 +259,20 @@ Here is described how my project got deployed to Heroku. The steps were done usi
     - Create a Heroku app.
     To create a [Heroku](https://dashboard.heroku.com) application, after log in, on the main page you should press the button: 'New', which is located on the upper right side. From the dropdown you should select: 'Create new app' option. Then you go to the next page, where you should fill a form with the following data: 'App name' and 'Choose a region', and then you should press button: 'Create app'.
 
-    Once the Heroku app is created, the next step is to go to option: 'settings'. In the category called 'Config Vars', you should press 'Reveal Config Vars' button, and then you have possibility to enter the KAY and VALUE for ndividual properties of:
+    Once the Heroku app is created, the next step is to go to option: 'settings'. In the category called 'Config Vars', you should press 'Reveal Config Vars' button, and then you have possibility to enter the KAY and VALUE for individual properties of:
 
-        - DATABASE_URL:
+    - DATABASE_URL:
 
-        To create DATABASE_URL, you need log in to the [ElephantSQL](https://www.elephantsql.com/). On the top right side of this page, you need to press button: 'Creata New Instance'. Then you need to fill out a short form, where you select a plan and name. After that you should press 'Select Region'button. After entering the region, press the button: 'review' and then your instance is created. On your instance's panel, you can see the details. Then you should copy the link, which is placed next to option 'URL'. 
+    To create DATABASE_URL, you need log in to the [ElephantSQL](https://www.elephantsql.com/). On the top right side of this page, you need to press button: 'Creata New Instance'. Then you need to fill out a short form, where you select a plan and name. After that you should press 'Select Region'button. After entering the region, press the button: 'review' and then your instance is created. On your instance's panel, you can see the details. Then you should copy the link, which is placed next to option 'URL'. 
 
-        This link is needed to enter as VALUE to KEY - DATABASE_URL to Config Vars on Heroku.
+    This link is needed to enter as VALUE to KEY - DATABASE_URL to Config Vars on Heroku.
 
-        - SECRET_KEY
+    - SECRET_KEY
 
 
-        - CLOUDINARY_URL
-        - DISABLE_COLLECTSTATIC
-        - PORT
+    - CLOUDINARY_URL
+    - DISABLE_COLLECTSTATIC
+    - PORT
 
 
 
