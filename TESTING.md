@@ -6,18 +6,20 @@
 
 ## Table of content
 - [Automated Testing](#automated-testing)
-    - (### Validation:)
-- (## Manual Testing )
-    - (### User Stories Testing)
-    - (### Testing on desktop)
-    - (#### This has been verified on every page:)
-        - (#### Home Page)
-        - (#### Our Menu Page)
-        - (#### Online Booking Page)
-        - (#### My bookings Page)
-        - (#### Log in)
-        - (#### Sign Up)
-
+    - [Validation](#validation)
+- [Manual Testing](#manual-testing)
+    - [User Stories Testing](#user-stories-testing)
+    - [Testing on desktop](#testing_on_deskttop)
+    - [This has been verified on every page](#this-has-been-verified-on-every-page)
+        - [Home Page](<#home-page>)
+        - [Our Menu Page](#our-menu-page)
+        - [Online Booking Page](#online-booking-page)
+        - [My bookings Page](#my-bookings-page)
+        - [Log in](#log-in)
+        - [Sign Up](#sign-up)
+        - [Log out page](#log-out-page)
+        - [Edit Booking Page](#edit-booking-page)
+        - [Delete Booking Page](#delete-booking-page)
 ## Automated Testing
 ### Validation:
 
