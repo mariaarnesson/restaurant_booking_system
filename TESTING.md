@@ -148,9 +148,22 @@
         - [Result for Reservation test_views.py_part1](media/test/validation_result_reservation_test_views.python_part1.png)  
         - [Result for Reservation test_views.py_part2](media/test/validation_result_reservation_test_views.python_part2.png)
         - [Result for Reservation test_views.py_part3](media/test/validation_result_reservation_test_views.python_part3.png)  
-        - [Result for Reservation test_views.py_part4](media/test/validation_result_reservation_test_views.python_part4.png)  
+        - [Result for Reservation test_views.py_part4](media/test/validation_result_reservation_test_views.python_part4.png)
+
+- Django test results and coverage:
+    - Tests were written for the following files:
+    Menu App:
+    - test_views.py
+    - test_models.py
+    - test_urls.py
+
+    Reservation App:
+    - test_forms.py
+    - test_models.py
+    - test_views.py
 
 
+![Django test result](media/test/coverage.jpeg)
 
 
 ## Manual Testing 
