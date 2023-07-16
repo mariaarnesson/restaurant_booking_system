@@ -367,6 +367,14 @@ The live link can be found here - [View the live project here](https://portfolio
 - [GitHub](https://github.com/) was used as a repository for code of the project. 
 - [Django](https://www.djangoproject.com/) was used as the framework to support rapid and secure development of the application.
 - [Bootstrap](https://getbootstrap.com/) was used to build responsive webbpages.
+- Heroku
+- Lucid - https://lucid.app/lucidchart
+- Pep8
+- Cloudinary
+- Favicon.io
+- JSHint
+- PostgreSQL
+- SQLite
 
 # Credits
 ## Code:
