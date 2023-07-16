@@ -112,6 +112,8 @@
         - [Result menu admin.py](media/test/validation_result_menu_admin_python.png)    
     - Result for Menu views.py:
         - [Result menu views.py](media/test/validation_result_menu_views_python.png)
+    - Result for Menu urls.py:
+        - [Result menu urls.py](media/test/validation_result_menu_urls_python.png)    
     - Result for Reservation forms.py:
         - [Result reservation forms.py](media/test/validation_result_reservation_forms_python.png)
     - Result for Reservation views.py:
