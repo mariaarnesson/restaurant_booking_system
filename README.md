@@ -31,6 +31,19 @@ The website owner has the ability to accept online reservations for this restaur
 # User Experience (UX)
 ## Strategy:
 
+UX principle.
+
+Restaurant target group:
+- People who like French cuisine
+- People looking for an elegant restaurant for special occasions
+
+Users can find on the website:
+- A clear site with a short description of the restaurant
+- Menu with available meals, description, photo and price.
+- Ability to register to book a table.
+- Form with the possibility of blocking the table for a specific date.
+- Restaurant contact details (phone and email).
+
 
 ## USER STORIES:
 
