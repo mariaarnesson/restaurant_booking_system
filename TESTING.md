@@ -142,7 +142,17 @@
     - Result for Reservation test_forms.py:
         - [Result reservation test_forms.py](media/test/validation_result_reservation_test_forms_python.png)
     - Result for Reservation test_models.py:
-        - [Result reservation test_models.py](media/test/validation_result_reservation_test_models_python.png)    
+        - [Result reservation test_models.py](media/test/validation_result_reservation_test_models_python.png)
+    - Result for Reservation test_views.py:
+        
+        - [Result for Reservation test_views.py_part1](media/test/validation_result_reservation_test_views.python_part1.png)  
+        - [Result for Reservation test_views.py_part2](media/test/validation_result_reservation_test_views.python_part2.png)
+        - [Result for Reservation test_views.py_part3](media/test/validation_result_reservation_test_views.python_part3.png)  
+        - [Result for Reservation test_views.py_part4](media/test/validation_result_reservation_test_views.python_part4.png)  
+
+
+
+
 ## Manual Testing 
 ### User Stories Testing
 
