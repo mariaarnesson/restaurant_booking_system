@@ -201,32 +201,33 @@ Users can find on the website:
 - Wireframe Desktop:
     - Home Page
         
-    ![wireframes_desktop_home](media/wireframes_desktop_home.png)
+    [wireframes_desktop_home](media/wireframes_desktop_home.png)
 
 
     - Menu Page
 
-    ![wireframes desktop menu](media/wireframes_desktop_menu.png)
+    [wireframes desktop menu](media/wireframes_desktop_menu.png)
 
     - Booking Online Page
 
-    ![wireframes desktop online booking](media/wireframes_desktop_online_booking.png)
+    [wireframes desktop online booking](media/wireframes_desktop_online_booking.png)
 
     - My Bookings Page
 
-    ![wireframes desktop my bookings](media/wireframes_desktop_mybookings.png)
+    [wireframes desktop my bookings](media/wireframes_desktop_mybookings.png)
 
     - Log In Page
 
-    ![wireframes desktop log in page](media/wireframes_login_desktop.png)
+    [wireframes desktop log in page](media/wireframes_login_desktop.png)
 
     - Sign Up Page
 
-    ![wireframes desktop sign up page](media/wireframes_desktop_signup.png)
+    [wireframes desktop sign up page](media/wireframes_desktop_signup.png)
 
     - Log Out Page
-
+    <details>
     ![wireframes log out page](media/wireframes_desktop_logout.png)
+    </details>
 
 - Wireframe on smaller screen
 
