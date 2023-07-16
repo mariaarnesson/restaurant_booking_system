@@ -226,6 +226,7 @@ Users can find on the website:
 
     - Log Out Page
     <details>
+    <summary>wireframes log out page</summary>
     ![wireframes log out page](media/wireframes_desktop_logout.png)
     </details>
 
