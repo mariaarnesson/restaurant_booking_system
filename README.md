@@ -34,14 +34,14 @@ The website owner has the ability to accept online reservations for this restaur
 UX principle.
 
 Restaurant target group:
-- People who like French cuisine
+- People who like French food.
 - People looking for an elegant restaurant for special occasions
 
 Users can find on the website:
 - A clear site with a short description of the restaurant
 - Menu with available meals, description, photo and price.
 - Ability to register to book a table.
-- Form with the possibility of blocking the table for a specific date.
+- Form with the possibility of booking a table for a specific date.
 - Restaurant contact details (phone and email).
 
 
@@ -72,8 +72,6 @@ Users can find on the website:
     - As a **Site User** I can **register or log in** to **make table reservations**
 - USER STORY: Registration #11
     - As a **Site User** I can **register** by **entering my email, password** and **confirming my password.**
-- USER STORY: Password #12
-    - As a **Site User** I can **easily recover my password** in case **I forget it.**     
 - USER STORY: Footer layout #13
     - As a **Site User** I can **use the footer** to switch to **other options** and check **restaurant locations on the map.**
 - USER STORY: Basic information on the homepage. #14
@@ -114,7 +112,7 @@ Users can find on the website:
 
     ![Home Page](media/home_page.png)
 
-        - Introduction text
+    - Introduction text
     - Scrolling down a few words from the author is introducing and setting out what the website is presenting and the general information about the restaurant is being told.
 
 
@@ -375,19 +373,21 @@ The live link can be found here - [View the live project here](https://portfolio
 
 - [Balsamiq](https://balsamiq.com/) was used to create wireframes.
 - [Font Awesome](https://fontawesome.com/) was used to create icons to footer and home page, logo.
-- [Google Fonts](https://fonts.google.com/?preview.text=Love%20Running&preview.text_type=custom) was used to import 'Caveat', 'Courier New' och 'Lato' that have been used for each page.
+- [Google Fonts](https://fonts.google.com/?preview.text=Love%20Running&preview.text_type=custom) was used to import 'Caveat', 'Courier New' that have been used for each page.
 - [Git](https://git-scm.com/) was used  by utilising the Gitpod terminal to commit to Git and Push to GitHub.
 - [GitHub](https://github.com/) was used as a repository for code of the project. 
 - [Django](https://www.djangoproject.com/) was used as the framework to support rapid and secure development of the application.
 - [Bootstrap](https://getbootstrap.com/) was used to build responsive webbpages.
-- Heroku
-- Lucid - https://lucid.app/lucidchart
-- Pep8
-- Cloudinary
-- Favicon.io
-- JSHint
-- PostgreSQL
-- SQLite
+- [Heroku](https://id.heroku.com/) was used to deploy the project.
+- [Lucid Chart](https://lucid.app/lucidchart) was used to create a diagram to models database.
+- [Pep8](https://pep8ci.herokuapp.com/#) was used to validate Python code.
+- [Cloudinary](https://console.cloudinary.com/) was used to store the images used by the application
+- [JSHint](https://jshint.com/) was used to validate JavaScript code.
+- [PostgreSQL](https://www.elephantsql.com/) was used for database.
+- [SQLite](https://www.sqlite.org/) was used for databse.
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/index.html) was used for registration.
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) was used to get a form crispy.
+- [Coverage](https://coverage.readthedocs.io/en/coverage-5.5/) was used to check automated testing on django.
 
 # Credits
 ## Code:
