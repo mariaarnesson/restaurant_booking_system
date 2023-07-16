@@ -6,7 +6,8 @@ from .models import No_of_guest, OnlineBooking
 class ModelsTest(TestCase):
 
     def setUp(self):
-        self.user = User.objects.create_user(username='testuser', password='testpassword')
+        self.user = User.objects.create_user(username='testuser',
+                                             password='testpassword')
         self.no_of_guest = No_of_guest.objects.create(guest=2)
         self.booking = OnlineBooking.objects.create(
             user=self.user,
@@ -28,4 +29,3 @@ class ModelsTest(TestCase):
         self.assertEqual(str(self.booking.date), '2023-07-13')
         self.assertEqual(str(self.booking.user), 'testuser')
         self.assertEqual(self.booking.approved, False)
-        

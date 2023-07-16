@@ -140,7 +140,9 @@
     - Result for Reservation urls.py:
         - [Result reservation urls.py](media/test/validation_result_reservation_urls_python.png)
     - Result for Reservation test_forms.py:
-        - [Result reservation test_forms.py](media/test/validation_result_reservation_test_forms_python.png)    
+        - [Result reservation test_forms.py](media/test/validation_result_reservation_test_forms_python.png)
+    - Result for Reservation test_models.py:
+        - [Result reservation test_models.py](media/test/validation_result_reservation_test_models_python.png)    
 ## Manual Testing 
 ### User Stories Testing
 
