@@ -245,6 +245,12 @@ The presented diagram shows a logical data model.
 - The choice of table type is marked as TABLE CHOICES.
 
 ![diagram_reservation](media/diagram_reservation.png)
+
+The presented diagram shows a logical data model.
+- Thanks to the "Menu" class, it was possible to divide the menu into three parts: 'Main Dishes', 'Drinks' and 'Desserts'. And it was also possible to add a photo to each of the menus.
+- Thanks to the 'Meals' class it was also possible to write the name of each meal, description and price.
+
+![diagram menu](media/diagram_menu.png)
 # Testing 
 
 Testing information can be found in separate [TESTING.md](TESTING.md) file.
