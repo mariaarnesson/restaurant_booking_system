@@ -206,7 +206,7 @@ Users can find on the website:
 
     - Menu Page
 
-    [wireframes desktop menu](media/wireframes_desktop_menu.png)
+    [wireframes desktop menu](media/wireframes_menu_html.png)
 
     - Booking Online Page
 
@@ -225,27 +225,26 @@ Users can find on the website:
     [wireframes desktop sign up page](media/wireframes_desktop_signup.png)
 
     - Log Out Page
-    <details>
-    <summary>wireframes log out page</summary>
-    ![wireframes log out page](media/wireframes_desktop_logout.png)
-    </details>
+
+    [wireframes log out page](media/wireframes_desktop_logout.png)
+
 
 - Wireframe on smaller screen
 
     - Home Page
-    ![wireframes ipad home nav hidden](media/wireframes_home_ipad.png)
+    [wireframes ipad home nav hidden](media/wireframes_home_ipad.png)
 
     - Menu Page
 
-    ![wireframes ipad manu page](media/wireframes_ipad_menu.png)
+    [wireframes ipad manu page](media/wireframes_ipad_menu.png)
 
     - Online Booking
 
-    ![wireframes ipad online booking page](media/wireframes_ipad_online_booking.png)
+    [wireframes ipad online booking page](media/wireframes_ipad_online_booking.png)
 
     - My bookings Page
 
-    ![wireframes ipad my bookings page](media/wireframes_ipad_mybookings_page.png)
+    [wireframes ipad my bookings page](media/wireframes_ipad_mybookings_page.png)
 
 
 
