@@ -94,6 +94,9 @@ input[type="submit"]:active {
     margin-left: -4em;
 }
 */
+.form-control {
+	width: 60%;
+}
 form {
 	margin: 2em;
 }
