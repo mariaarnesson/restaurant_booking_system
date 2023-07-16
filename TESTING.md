@@ -121,9 +121,8 @@
     - Result for Menu test_urls.py:
         - [Result for menu test urls.py](media/test/validation_result_menu_test_urls_python.png)
 
-    - Result for Reservation models.py part1:
+    - Result for Reservation models.py:
         - [Result for reservation models.py part1](media/test/validation_result_reservation_models_python_part1.png)
-    - Result for Reservation models.py part2:
         - [Result for reservation models.py part2](media/test/validation_result_reservation_models_python_part2.png)
     - Result for Reservation admin.py:
         - [Result for reservation admin.py](media/test/validator_result_reservation_admin_python.png)        
@@ -140,6 +139,8 @@
         - [Result reservation views.py part8](media/test/validation_result_reservation_python_part8.png)    
     - Result for Reservation urls.py:
         - [Result reservation urls.py](media/test/validation_result_reservation_urls_python.png)
+    - Result for Reservation test_forms.py:
+        - [Result reservation test_forms.py](media/test/validation_result_reservation_test_forms_python.png)    
 ## Manual Testing 
 ### User Stories Testing
 
