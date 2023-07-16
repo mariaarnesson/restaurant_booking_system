@@ -108,6 +108,8 @@
 
     - Result for Menu models.py:
         - [Result menu models.py](media/test/validation_result_menu_models_python.png)
+    - Result for Menu admin.py:
+        - [Result menu admin.py](media/test/validation_result_menu_admin_python.png)    
     - Result for Menu views.py:
         - [Result menu views.py](media/test/validation_result_menu_views_python.png)
     - Result for Reservation forms.py:
