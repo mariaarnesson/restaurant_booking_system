@@ -208,6 +208,10 @@ Users can find on the website:
 
     [wireframes desktop menu](media/wireframes_menu_html.png)
 
+    - Meal Page
+
+    [wireframes desktop meal](media/wireframes_meal.png)
+
     - Booking Online Page
 
     [wireframes desktop online booking](media/wireframes_desktop_online_booking.png)
