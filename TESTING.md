@@ -165,6 +165,13 @@
 
 ![Django test result](media/test/coverage.jpeg)
 
+## Known Bugs
+
+![bug](media/test/bug.png)
+![bugs](media/test/bugs.png)
+
+I got this message while trying to test the file test_views.py.
+
 
 ## Manual Testing 
 ### User Stories Testing
