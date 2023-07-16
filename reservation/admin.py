@@ -7,7 +7,8 @@ class No_of_guestAdmin(admin.ModelAdmin):
 
 
 class OnlineBookingAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'no_of_guest', 'date', 'approved')
+    list_display = ('first_name', 'last_name',
+                    'no_of_guest', 'date', 'approved')
     list_filter = ('approved', 'date')
     search_fields = ('first_name', 'last_name')
     date_hierarchy = 'date'
