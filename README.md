@@ -406,6 +406,8 @@ The live link can be found here - [View the live project here](https://portfolio
 - [TimeField](https://www.geeksforgeeks.org/timefield-django-models/)
 
 - My codes were based on information from that site [ModelForm](https://docs.djangoproject.com/en/4.1/topics/forms/modelforms/)
+- My code to views.py were based on information from this site [Views](https://docs.djangoproject.com/en/4.2/topics/class-based-views/)
+- Moving letters on wlcome text was used from this site [Java script- welcome text](https://tobiasahlin.com/moving-letters/#16)
 ## Media:
 All pictures was taken from [Freepik](https://www.freepik.com/):
 - [Women with a cup](https://img.freepik.com/free-photo/lifestyle-portrait-elegant-young-woman-with-dark-wavy-hairstyle-trendy-makeup-fashionable-beige-pullover-coat-sitting-cafe-terrace-drinking-coffee-from-white-cup_197531-24448.jpg?size=626&ext=jpg)
@@ -420,6 +422,7 @@ All pictures was taken from [Freepik](https://www.freepik.com/):
 - [Drinks](https://res.cloudinary.com/dun5p7nsx/image/upload/v1688718175/lbpymghnmgayog1qd7de.webp)
 - [Desserts- macarons](https://res.cloudinary.com/dun5p7nsx/image/upload/v1688718236/r6pnh4aoef0viy89sy8m.jpg)
 - [Online booking photo](https://img.freepik.com/free-vector/waiters-concept-illustration_114360-2908.jpg?w=1060&t=st=1684266496~exp=1684267096~hmac=5f7ce09bf9265ee365e209700bfa6258f97461744c5fa1aec14eab988542d737)
+
 
 
 
