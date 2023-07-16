@@ -12,4 +12,3 @@ class MenuAdmin(admin.ModelAdmin):
 
 admin.site.register(Menu, MenuAdmin)
 admin.site.register(Meal)
-
