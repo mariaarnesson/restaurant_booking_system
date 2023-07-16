@@ -138,7 +138,8 @@
         - [Result reservation views.py part6](media/test/validation_result_reservation_python_part6.png)  
         - [Result reservation views.py part7](media/test/validation_result_reservation_python_part7.png)  
         - [Result reservation views.py part8](media/test/validation_result_reservation_python_part8.png)    
-
+    - Result for Reservation urls.py:
+        - [Result reservation urls.py](media/test/validation_result_reservation_urls_python.png)
 ## Manual Testing 
 ### User Stories Testing
 
