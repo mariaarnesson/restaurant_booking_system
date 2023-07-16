@@ -98,7 +98,8 @@ input[type="submit"]:active {
 	width: 60%;
 }
 form {
-	margin: 2em;
+	margin: 3em;
+	width: 70%;
 }
 label {
 	float: left;
