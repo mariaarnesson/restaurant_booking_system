@@ -54,7 +54,7 @@ class OnlineBooking(models.Model):
     date = models.DateField(null=False, blank=False)
     time = models.CharField(null=True, blank=False,
                             choices=TIME_CHOICES, max_length=60)
-    
+
     occassion = models.CharField(max_length=150, choices=OCCASSION_CHOICES,
                                  default="Birthday")
     table = models.CharField(max_length=150, choices=TABLE_CHOICES,
