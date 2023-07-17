@@ -94,6 +94,10 @@
 
 - W3C CSS validation CSS
     - [Validator.w3](https://validator.w3.org/nu/#textarea)  was used to validate CSS.
+
+    Result:
+    [Validation Result CSS part1](media/test/validation_css_part1.png)
+    [Validation Result CSS part2](media/test/validation_css_part2.png)
     
 - JSHint JavaScript
     - [JSHint](https://jshint.com/) was used to validatw JS.
