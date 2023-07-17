@@ -12,7 +12,7 @@
     <div class="row g-0 align-items-center">
       <div class="col-lg-6 mb-5 mb-lg-0"> 
         <img src="https://img.freepik.com/free-vector/access-control-system-abstract-concept_335657-3180.jpg?w=826&t=st=1689456234~exp=1689456834~hmac=865821e2891cd98bbab3098f5b33b7529ce6644036d911d6d78025b3c44fdae6"
-            class="w-100 h-100 rounded-4 shadow-4" alt="a cook">
+            class="w-100 h-100 rounded-4 shadow-4" alt="person with padlock key">
       </div>
       <div class="col-lg-6 mb-5 mb-lg-0">
         <div class="card cascading-right">     
@@ -21,7 +21,7 @@
             <p class="text-black-50 mb-5">Please login to your account</p>
             <div class="d-flex pb-4">
               <p class="mb-0 me-2">Don't have an account?</p>
-              <a href="{% url 'account_signup' %}" class="btn btn-outline-danger text-white-50 fw-bold">Create new</a>
+              <a href="{% url 'account_signup' %}" class="btn btn-danger text-white-50 fw-bold">Create new</a>
             </div>
             {% csrf_token %}
             {{ form | crispy }}
