@@ -427,8 +427,16 @@ All pictures was taken from [Freepik](https://www.freepik.com/):
 - [Drinks](https://res.cloudinary.com/dun5p7nsx/image/upload/v1688718175/lbpymghnmgayog1qd7de.webp)
 - [Desserts- macarons](https://res.cloudinary.com/dun5p7nsx/image/upload/v1688718236/r6pnh4aoef0viy89sy8m.jpg)
 - [Online booking photo](https://img.freepik.com/free-vector/waiters-concept-illustration_114360-2908.jpg?w=1060&t=st=1684266496~exp=1684267096~hmac=5f7ce09bf9265ee365e209700bfa6258f97461744c5fa1aec14eab988542d737)
+- [Main Dishes photo](https://res.cloudinary.com/dun5p7nsx/image/upload/v1689147362/xcpyrypyxqmo6xfcjmh8.png)
+- [Drinks Photo](https://res.cloudinary.com/dun5p7nsx/image/upload/v1689152185/rvcxodieuvemzduv7uyg.png)
+- [Log In](https://img.freepik.com/free-vector/access-control-system-abstract-concept_335657-3180.jpg?w=826&t=st=1689456234~exp=1689456834~hmac=865821e2891cd98bbab3098f5b33b7529ce6644036d911d6d78025b3c44fdae6)
+- [Sign Up](https://img.freepik.com/free-vector/resume-concept-illustration_114360-103.jpg?w=826&t=st=1684359273~exp=1684359873~hmac=2d7db2f3cac7e4b0a51dddb586dd2965ac3db584c6b57c80a52b643c578a8e3d)
 
 
 
+# Acknowledgements:
 
+- Thank you to my mentor for useful feedback and guidance in my project, and help with description of deploying, explaining some codes in views.py. I received a lot of help and a very detailed explanation.
+
+- Thank you to tutor assistance for explanation of the issues related to test_views.py and deploying to heroku.
 
