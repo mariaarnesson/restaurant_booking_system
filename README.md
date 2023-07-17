@@ -436,7 +436,7 @@ All pictures was taken from [Freepik](https://www.freepik.com/):
 
 # Acknowledgements:
 
-- Thank you to my mentor for useful feedback and guidance in my project, and help with description of deploying, explaining some codes in views.py. I received a lot of help and a very detailed explanation.
+- Thank you to my mentor Elaine Broche for useful feedback and guidance in my project, and help with description of deploying, explaining some codes in views.py. I received a lot of help and a very detailed explanation.
 
 - Thank you to tutor assistance for explanation of the issues related to test_views.py and deploying to heroku.
 
